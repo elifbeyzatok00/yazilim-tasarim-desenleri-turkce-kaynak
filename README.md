@@ -254,6 +254,7 @@ Bir sınıftan başka sınıfların türetilmesidir.
 
 Kalıtım, mevcut sınıfların üzerine yeni sınıflar oluşturma yeteneğidir. Bu sayede türetilen sınıf, türediği sınıfın özelliklerini devralır. Kalıtımın en büyük yararı kodun yeniden kullanılmasıdır. Mevcut sınıftan biraz farklı bir sınıf oluşturmak istiyorsak, kodu kopyalamamıza gerek yoktur. Bunun yerine, varolan sınıfı genişletir ve ekstra işlevselliği alt sınıfa koyarız.  
 ![Alt text](image-2.png)
+
 Çoğu programlama dilinde yalnızca bir sınıftan türetme işlemi gerçekleştirilmektedir ama birden fazla interface'den (ara birimden) türetilme işlemi de gerçekleştirilebilmektedir.
 
 Örnek Kod C#
@@ -602,3 +603,7 @@ Bu örneklerde, Sekil soyut sınıf (abstract class) olarak tanımlanmıştır. 
 ### Nedir?
 
 ## Çevik Yazılım Geliştirme Süreci (Agile Scrum)
+
+## Kaynakça
+
+[1] - https://github.com/yusufyilmazfr/tasarim-desenleri-turkce-kaynak
