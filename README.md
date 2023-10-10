@@ -811,7 +811,12 @@ Aşağıda sınıflar arasında Composition ilişkisini görebilirsiniz. Kalp, i
 - Yazılım sistemleri modüler şekilde tasarlanmalıdır.
 - Bir projenin modülünün başka bir projede de kullanılmasına **reusability** denir.
 
-## Çevik Yazılım Geliştirme Süreci (Agile, Scrum)
+## Çevik(Agile) Yazılım Geliştirme Süreci
+
+Agile bir proje yönetim metodolojisi olarak tanımlanabilir. Farklı disiplinlerde farklı framework'ler İle kullanılır.
+İlk kullanılmaya başlandığı alan yazılım olduğu İçin yazılım geliştirme metodolojisi olarak da anılmaktadır.
+
+Bu konu ile ilgili sunumu incelemek için [buraya](https://www.canva.com/design/DAFw1kSJ3vk/fTo0fvSROhmkWpz_Gs1cuQ/edit?utm_content=DAFw1kSJ3vk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) tıklayınız.
 
 ## Kaynakça
 
