@@ -12,6 +12,7 @@ Ortaya çıkış nedenlerinden bazıları da yazılımda; karmaşıklığı azal
 ### Nedir?
 
 ![Alt text](image.png)
+
 Yukarıda Developer adında bir sınıf görülmektedir. Sınıf alanlar (fields) ve davranışlarımızın (methods) tanımlandığı yerdir. Nesne ise bu sınıftan bir örnek alınmış halidir.
 
 ### Nesne Yönelimli Programlama İlkeleri
