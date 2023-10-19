@@ -819,6 +819,55 @@ Agile bir proje yönetim metodolojisi olarak tanımlanabilir. Farklı disiplinle
 
 Bu konu ile ilgili sunumu incelemek için [buraya](https://www.canva.com/design/DAFw1kSJ3vk/fTo0fvSROhmkWpz_Gs1cuQ/edit?utm_content=DAFw1kSJ3vk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) tıklayınız.
 
+## Değer Tipi, Referans Tipi, Steak, Heap Nedir/Nasıl Çalışır?
+
+Değer tipi (value type) ve referans tipi (reference type), programlama dillerinde veri türlerini temsil eden iki önemli kavramdır. Bu terimler, bir programın bellek yönetimi ve veri depolama şekli ile ilgilidir. Ayrıca, "stack" ve "heap" terimleri, bellek yönetimiyle ilişkilendirilen iki farklı bellek bölgesini temsil eder.
+
+### Değer Tipi (Value Type)
+
+Değer tipi, değerleri doğrudan içerir ve bellekte değerlerin kendileri saklanır. Değer tipleri, genellikle temel veri tipleri olarak adlandırılır ve bellekte sabit bir boyutta yer kaplarlar. Örnek olarak, **int, float, char** gibi veri tipleri değer tiplerine örnek olarak verilebilir. Değer tipleri doğrudan bellek üzerinde saklandığı için hızlıdır ve bellek yönetimi daha basittir.
+
+```java
+int sayi = 42; // Değer tipi örnek: sayi değişkeni değeri doğrudan bellekte saklanır.
+```
+
+### Referans Tipi(Reference Type):
+
+Referans tipleri, değerlerin bellekte bir referans aracılığıyla saklandığı nesneleri temsil eder. Yani, bellekte değerlerin kendisi değil, değerlerin bulunduğu bellek adresi (referans) saklanır. Referans tipleri, genellikle **sınıflar, diziler ve diğer nesne tabanlı yapılar** gibi karmaşık veri tipleri olarak kullanılır. Bu tür veri tipleri, bellek yönetimi için daha fazla karmaşıklık gerektirir, çünkü nesneler dinamik olarak bellekte oluşturulabilir ve yönetilebilir.
+
+```java
+List<int> sayiListesi = new List<int>(); // Referans tipi örnek: sayiListesi bir referansı saklar ve bellekte dinamik olarak oluşturulur.
+
+```
+
+### Stack:
+
+Stack bellek bölgesi, genellikle değer tipleri ve referanslar için kullanılan bir bellek bölgesidir. **Değer tipleri doğrudan stack bellek bölgesinde saklanır.** Ayrıca, referanslar (nesnelerin bellek adresleri) de stack bellek bölgesinde saklanabilir. Stack bellek bölgesi hızlı erişime izin verir ve bellek yönetimi otomatik olarak gerçekleşir. Ancak, stack bellek bölgesi sabit bir boyuta sahiptir ve genellikle kısıtlı bir büyüklüğe sahiptir.
+
+### Heap:
+
+Heap bellek bölgesi, genellikle **referans tipleri için dinamik bellek tahsisi için kullanılır.** Yani, heap bellek bölgesi, program çalıştığı sürece değişebilen dinamik veri yapılarını (örneğin, değişken boyutlu diziler ve nesneler) saklamak için kullanılır. Heap bellek bölgesi, programcının manuel olarak bellek tahsisi ve geri verme işlemlerinden sorumlu olduğu daha esnek bir bellek alanıdır. Bu, daha fazla bellek kullanım esnekliği sağlar, ancak doğru yönetilmezse bellek sızıntılarına (memory leaks) yol açabilir.
+
+![Alt text](image-18.png)
+
+![Alt text](image-20.png)
+int, short, long, byte, float, double, decimal, char, bool => değer tipi
+string, diziler, class, interface, enum, struct => referans tipi
+
+###### null referans tip midir?
+
+Evet, "null" bir referans değeridir.
+
+```
+null -> object => referans tip
+```
+
+Programlamada, "null" terimi, bir değişkenin değerinin atanmamış veya geçersiz olduğunu ifade eder. Yani, bir değişkenin "null" değeri, bellekte hiçbir nesneyi veya veriyi temsil etmediğini gösterir.
+
+## SOLID
+
+### Nedir?
+
 ## Kaynakça
 
 [1] - https://github.com/yusufyilmazfr/tasarim-desenleri-turkce-kaynak
