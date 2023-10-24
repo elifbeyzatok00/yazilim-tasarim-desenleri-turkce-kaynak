@@ -1361,9 +1361,370 @@ public class Main {
 }
 ```
 
-## Property Nedir?
+## Property (Nitelik, Özellik) Nedir?
+
+Bir nitelik (property) dediğimiz zaman gerçekte söz konusu olan şey nesneye ait bir değerdir. Bir sınıftan üretilmiş her nesne o sınıfın niteliklerini taşır, ancak bu nitelikler o nesnenin kendisine ait özgün değerlere sahiptirler.
+
+Programlama dilleri açısından daha somut olarak konuşacak olursak, nitelik gerçekte bir değişkendir (variable) ve dolayısıyla nesnenin oluşturulduğu dilde bir değişken hangi veri tiplerinde olabiliyorsa nitelikler de aynı veri tiplerinde olabilir.
+
+Niteliklerden bazıları sonradan değiştirilebilir niteliktedir bazıları ise sadece okunabilir nitelikte (read-only) olur. Bunun sonucunda bu tür nitelikler üzerinde bir değişiklik yapılamaz. Nesne adı ile özelliği arasında bir nokta (.) sembolü bulunur.
+
+Örnek Kod Java
+
+```java
+public class Araba {
+    // Araba sınıfının özellikleri (instance variables)
+    String marka;
+    String model;
+    int yil;
+
+    // Araba sınıfının yapıcı metodu (constructor)
+    public Araba(String marka, String model, int yil) {
+        this.marka = marka;
+        this.model = model;
+        this.yil = yil;
+    }
+
+    // Araba sınıfının metodu
+    public void bilgileriGoster() {
+        System.out.println("Marka: " + marka);
+        System.out.println("Model: " + model);
+        System.out.println("Yıl: " + yil);
+    }
+
+    public static void main(String[] args) {
+        // Araba sınıfından bir nesne oluşturma
+        Araba arabam = new Araba("Toyota", "Corolla", 2020);
+
+        // Araba nesnesinin bilgilerini gösterme
+        arabam.bilgileriGoster();
+    }
+}
+```
+
+Bu örnek, Araba adında bir sınıf oluşturur. Bu sınıfın içinde marka, model ve yil adında özellikler bulunur. Araba sınıfının bir yapıcı metodu vardır (public Araba(String marka, String model, int yil)), bu metodun içinde özelliklere değer atanır. Ayrıca bilgileriGoster() adında bir metot bulunur, bu metot aracılığıyla arabaya ait bilgiler ekrana yazdırılır. main metodu içinde Araba sınıfından bir nesne oluşturulur ve bu nesnenin bilgileri gösterilir.
+
+- Field’lara yani verilerin tutulduğu alana doğrudan erişim iznini
+  kısıtlamak ve geçerli veriler sağlamak adına “Property” kullanılır.
+- Property sayesinde Field’lara koşullu erişim sağlanır.
+- Property’ler asla veri tutmaz. Sadece field’ı “kapsüller
+- Property, “get” ve “set” olmak üzere iki bloktan oluşur.
+- Get bloğu değişkeninin değeri okunmak istendiğinde çalışır.
+- Set bloğu değişkene değer atanmak istendiğinde çalışır.
+
+![Alt text](image-26.png)
 
 ## Constructor Nedir?
+
+Nesneler için classların örneğidir demiştik. Constructor her
+nesne tanımlandığında devreye giren o nesneye ait özelliklerinin
+ilk değerlerini atamak için kullanılan metottur.
+![Alt text](image-28.png)
+
+Constructor Tanımlama Kuralları :
+
+- Metodun ismi class ismi ile aynı olmak zorundadır.
+- Geri dönüş tipi olmaz.
+- Eğer tanımlanmazsa bile mutlaka default constructor vardır.
+- Overload edilebilir.
+- Eğer değer atanırken veya okunurken bir kısıtlama getirmek
+  istiyorsak koşulları get ve set blokları içersinde yazmalıyız.
+- “Value” değişkene atanmak istenen değeri belirtir.
+
+  ![Alt text](image-27.png)
+
+## Kalıtım ile Üretilen Sınıflın (A-B-C) Çalışması
+
+##### B sınıfı A dan üretilmiş ve C sınıfı B den üretilmiş kod örneğini Java, C# ve Python ile yazalım
+
+`Java`
+
+```java
+// A sınıfı
+class A {
+    void methodA() {
+        System.out.println("A sınıfının methodA metodu");
+    }
+}
+
+// B sınıfı, A sınıfından türetilmiştir
+class B extends A {
+    void methodB() {
+        System.out.println("B sınıfının methodB metodu");
+    }
+}
+
+// C sınıfı, B sınıfından türetilmiştir
+class C extends B {
+    void methodC() {
+        System.out.println("C sınıfının methodC metodu");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        C c = new C();
+        c.methodA(); // A sınıfının methodA metodu
+        c.methodB(); // B sınıfının methodB metodu
+        c.methodC(); // C sınıfının methodC metodu
+    }
+}
+```
+
+Bu örnekte, A sınıfı temel sınıf olarak kullanılmış, B sınıfı A sınıfından türetilmiş ve C sınıfı da B sınıfından türetilmiştir. Bu şekilde, C sınıfı hem A sınıfının hem de B sınıfının yöntemlerine erişebilir.
+
+`C#`
+
+```cs
+using System;
+
+// A sınıfı
+class A {
+    public void methodA() {
+        Console.WriteLine("A sınıfının methodA metodu");
+    }
+}
+
+// B sınıfı, A sınıfından türetilmiştir
+class B : A {
+    public void methodB() {
+        Console.WriteLine("B sınıfının methodB metodu");
+    }
+}
+
+// C sınıfı, B sınıfından türetilmiştir
+class C : B {
+    public void methodC() {
+        Console.WriteLine("C sınıfının methodC metodu");
+    }
+}
+
+class MainClass {
+    public static void Main (string[] args) {
+        C c = new C();
+        c.methodA(); // A sınıfının methodA metodu
+        c.methodB(); // B sınıfının methodB metodu
+        c.methodC(); // C sınıfının methodC metodu
+    }
+}
+
+```
+
+`Python`
+
+```python
+# A sınıfı
+class A:
+    def methodA(self):
+        print("A sınıfının methodA metodu")
+
+# B sınıfı, A sınıfından türetilmiştir
+class B(A):
+    def methodB(self):
+        print("B sınıfının methodB metodu")
+
+# C sınıfı, B sınıfından türetilmiştir
+class C(B):
+    def methodC(self):
+        print("C sınıfının methodC metodu")
+
+# Ana fonksiyon
+def main():
+    c = C()
+    c.methodA() # A sınıfının methodA metodu
+    c.methodB() # B sınıfının methodB metodu
+    c.methodC() # C sınıfının methodC metodu
+
+# Ana fonksiyonu çağırma
+if __name__ == "__main__":
+    main()
+
+```
+
+##### C sınıfının hem A sınıfına hem de B sınıfına ihtiyaç duyduğu bir senaryoyu içeren kod örneğini Java, C# ve Python ile yazalım
+
+`Java`
+
+```java
+// A sınıfı
+class A {
+    void methodA() {
+        System.out.println("A sınıfının methodA metodu");
+    }
+}
+
+// B sınıfı, A sınıfından türetilmiştir
+class B extends A {
+    void methodB() {
+        System.out.println("B sınıfının methodB metodu");
+    }
+}
+
+// C sınıfı, hem A sınıfından hem de B sınıfından türetilmiştir
+class C extends B {
+    void methodC() {
+        System.out.println("C sınıfının methodC metodu");
+    }
+
+    void callMethods() {
+        // A sınıfının methodunu çağırma
+        methodA();
+
+        // B sınıfının methodunu çağırma
+        methodB();
+
+        // C sınıfının kendi methodunu çağırma
+        methodC();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        C c = new C();
+        c.callMethods();
+    }
+}
+
+```
+
+Bu örnekte, C sınıfı hem A sınıfından hem de B sınıfından türetilmiştir. callMethods() metodu, A sınıfının methodA(), B sınıfının methodB(), ve C sınıfının kendi methodC() metodlarını çağırır. Bu şekilde C sınıfı, A ve B sınıflarına ihtiyaç duyan bir senaryoyu içerir.
+
+`C#`
+
+```cs
+using System;
+
+class A {
+    public void methodA() {
+        Console.WriteLine("A sınıfının methodA metodu");
+    }
+}
+
+class B : A {
+    public void methodB() {
+        Console.WriteLine("B sınıfının methodB metodu");
+    }
+}
+
+class C : B {
+    public void methodC() {
+        Console.WriteLine("C sınıfının methodC metodu");
+    }
+
+    public void callMethods() {
+        // A sınıfının methodunu çağırma
+        methodA();
+
+        // B sınıfının methodunu çağırma
+        methodB();
+
+        // C sınıfının kendi methodunu çağırma
+        methodC();
+    }
+}
+
+class MainClass {
+    public static void Main (string[] args) {
+        C c = new C();
+        c.callMethods();
+    }
+}
+
+```
+
+`Python`
+
+```python
+class A:
+    def methodA(self):
+        print("A sınıfının methodA metodu")
+
+class B(A):
+    def methodB(self):
+        print("B sınıfının methodB metodu")
+
+class C(B):
+    def methodC(self):
+        print("C sınıfının methodC metodu")
+
+    def callMethods(self):
+        # A sınıfının methodunu çağırma
+        self.methodA()
+
+        # B sınıfının methodunu çağırma
+        self.methodB()
+
+        # C sınıfının kendi methodunu çağırma
+        self.methodC()
+
+# Ana fonksiyon
+def main():
+    c = C()
+    c.callMethods()
+
+# Ana fonksiyonu çağırma
+if __name__ == "__main__":
+    main()
+
+```
+
+##### C sınıfının hem A sınıfına hem de B sınıfına ihtiyaç duymadığı bir senaryoyu içeren kod örneğini Java, C# ve Python ile yazalım
+
+```java
+// C sınıfı, doğrudan hiçbir sınıftan türetilmemiştir
+class C {
+    void methodC() {
+        System.out.println("C sınıfının methodC metodu");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        C c = new C();
+        c.methodC(); // C sınıfının methodC metodu
+    }
+}
+```
+
+Bu örnekte, C sınıfı doğrudan hiçbir sınıftan türetilmemiştir. Sadece C sınıfının kendi methodC() metodu bulunmaktadır. Başka bir deyişle, C sınıfı A veya B sınıfından türetilmiş değildir ve bu sınıfın tek bir metodunu çağırabiliriz.
+
+`C#`
+
+```cs
+using System;
+
+class C {
+    public void methodC() {
+        Console.WriteLine("C sınıfının methodC metodu");
+    }
+}
+
+class MainClass {
+    public static void Main (string[] args) {
+        C c = new C();
+        c.methodC(); // C sınıfının methodC metodu
+    }
+}
+
+```
+
+`Python`
+
+```python
+class C:
+    def methodC(self):
+        print("C sınıfının methodC metodu")
+
+# Ana fonksiyon
+def main():
+    c = C()
+    c.methodC() # C sınıfının methodC metodu
+
+# Ana fonksiyonu çağırma
+if __name__ == "__main__":
+    main()
+
+```
 
 ## Kaynakça
 
@@ -1375,4 +1736,4 @@ public class Main {
 
 [4] - https://ufukunal.medium.com/java-boxing-ve-unboxing-kavramlar%C4%B1-8a5109d7a06d#:~:text=Boxing(Kutulama)%20%3A%20Primitive%20type,de%C4%9Feri%20geri%20%C3%A7%C4%B1karma%20i%C5%9Flemine%20denir.
 
-[5] -
+[5] - https://gelecegiyazanlar.turkcell.com.tr/konu/egitim/301-javascript/nitelik-property
