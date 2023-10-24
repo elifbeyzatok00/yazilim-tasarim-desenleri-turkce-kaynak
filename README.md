@@ -864,9 +864,127 @@ null -> object => referans tip
 
 Programlamada, "null" terimi, bir değişkenin değerinin atanmamış veya geçersiz olduğunu ifade eder. Yani, bir değişkenin "null" değeri, bellekte hiçbir nesneyi veya veriyi temsil etmediğini gösterir.
 
-## SOLID
+## S.O.L.I.D.
 
 ### Nedir?
+
+S.O.L.I.D., yazılım geliştirirken sürdürülebilir kod yazmamızı sağlayan bir prensipler bütünüdür.
+
+Buradaki sürdürülebilirlikten kasıt; yazılım gereksinimleri değiştiğinde ya da mevcut yazılıma eklemeler yapıldığında sistemin buna direnç göstermemesi, en azından en az direnci göstermesi, yani esnek olmasıdır. Bunların yanı sıra bakımının ve anlaşılmasının kolay olması gibi nedenler de sayılabilir.
+
+Bunları yapmamızı sağlayan prensipleri 5 madde içerisinde inceleyeceğiz.
+
+**S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)**
+Her birimin tek bir sorumluluğu olmalıdır.
+**O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)**
+Geliştirilmeye açık, değişikliğe kapalı olmalıdır.
+**L → LSP (Liskov's Substition Principle)(Likov'un Yerine Geçme Prensibi)**
+Alt sınıf, üst sınıfın yerine geçtiğinde aynı davranışı göstermelidir.
+**I → ISP (Interface Segregation Principle)(Arayüz Ayrımı Prensibi)**
+Belirli işlemleri yapan interface'ler oluşturulmalıdır.
+**D → DIP (Dependency Inversion Principle)(Bağımlılıkların Tersine Çevrilmesi Prensibi)**
+Bağımlılıklar soyut sınıflara doğru olmalıdır
+
+Bu prensipleri daha detaylı inceleyelim:
+
+#### S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)
+
+Her sınıf, metot, fonksiyon tek bir sorumluluğa sahip olmalıdır.
+
+Şayet bu kurala uymazsak ilerleyen süreçte bir değişikliğe gidildiğinde bunun etkisini birçok yerde görmüş oluruz. Nedeni ise bir yapıya birden fazla sorumluluk yüklenmesinden dolayıdır. Eğer değişikliklerden etkilenen yerler arasında sistemin birçok yerinde kullanılan bir yapımız da varsa maliyet gittikçe artacaktır.
+
+![Alt text](image-21.png)
+
+```java
+public class Person {
+    public String firstName;
+
+    public void sendPasswordResetLink() {
+        ...
+    }
+}
+```
+
+Yukarıdaki diyagrama ve koda baktığımızda Person sınıfı içerisinde sendPasswordResetLink() diye bir metot bulunmaktadır. Bu sınıfın asıl amacı kişilere ait bilgileri tutmaktır, şifre sıfırlama bağlantısı göndermek değil. Birden fazla sorumluluk yüklendiği için olası bir mail gönderme değişikliğinde bu sınıf da etkilenecektir.
+
+Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir.
+
+![Alt text](image-22.png)
+
+```java
+class Person {
+     public String firstName;
+}
+
+class EmailService {
+    public void sendPasswordResetLink(Person person) {
+        ...
+    }
+}
+```
+
+#### O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)
+
+Yapılarımız (sınıf, metot, fonksiyon) gelişime açık değişime kapalı olmalıdır.
+
+Yazılımlar için zamanla değişim şüphesiz kaçınılmazdır; değişen iş kuralları, kullanılan harici kütüphaneler gibi başlıca nedenler örnek gösterilebilir. Bu prensibin anlatmak istediği şey yeni bir davranış ya da özellik eklemek istediğimiz durumda; yapmak istediğimiz değişikliği mevcut koda dokunmadan, değişimi sadece yeni kodlar üzerinden sağlamaktır.
+
+![Alt text](image-23.png)
+
+```java
+class Employee {
+    ...
+}
+
+class EmployeeManager {
+    public void addEmployee(Object database, Employee employee) {
+        if (database instanceof OracleDatabase) {
+            ((OracleDatabase) database).addDatabase(employee);
+        }
+    }
+}
+
+class OracleDatabase {
+    public void addDatabase(Employee employee) {
+        ...
+    }
+}
+```
+
+Yukarıdaki koda ve diyagrama baktığımız zaman EmployeeManager adında bir sınıfımız mevcut ve gelen Employee sınıfına ait nesneyi veri tabanına kayıt ediyor. Veri tabanına kayıt etmeden önce hangi veri tabanı örneği geldiğini de if-else durumlarında kontrol edip tip dönüşümü sağlamaktadır. Yukarıdaki kod örneği maalesef Open-Closed için uygun değildir. Nedeni ise yeni bir veri tabanı eklenmek istediğinde başka bir if-else durumu açılacaktır, yeni eklenen veri tabanı kontrolü sağlanacaktır ve sürekli mevcut koda bir müdahalede bulunulacaktır. Bunu çözmenin yolu ise genelde soyutlamadan geçmektedir.
+
+Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir. Yeni bir eklemede mevcut koda dokunmaya gerek kalmıyor bu sayede. Kayıt işlemlerini MySQL üzerinde yapmak istediğimiz zaman MySQLDatabase adında bir sınıf oluşturup IDatabase arayüzünü uygulamamız yeterlidir. 🥰
+
+![Alt text](image-24.png)
+
+```java
+class Employee {
+...
+}
+
+interface IDatabase {
+    void addDatabase(Employee employee);
+}
+
+class EmployeeManager {
+    public void addEmployee(IDatabase database, Employee employee) {
+        database.addDatabase(employee);
+    }
+}
+
+class OracleDatabase implements IDatabase {
+    @Override
+    public void addDatabase(Employee employee) {
+       ...
+    }
+}
+```
+
+#### L → LSP (Liskov's Substition Principle)(Likov'un Yerine Geçme Prensibi)
+
+#### I → ISP (Interface Segregation Principle)(Arayüz Ayrımı Prensibi)
+
+#### D → DIP (Dependency Inversion Principle)(Bağımlılıkların Tersine Çevrilmesi Prensibi)
 
 ## Kaynakça
 
