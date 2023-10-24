@@ -890,104 +890,489 @@ Bu prensipleri daha detaylı inceleyelim:
 #### S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)
 
 Her sınıf, metot, fonksiyon tek bir sorumluluğa sahip olmalıdır.
+Tek bir sorumluluk yerine getirmek üzere tasarlanmıştır
 
 Şayet bu kurala uymazsak ilerleyen süreçte bir değişikliğe gidildiğinde bunun etkisini birçok yerde görmüş oluruz. Nedeni ise bir yapıya birden fazla sorumluluk yüklenmesinden dolayıdır. Eğer değişikliklerden etkilenen yerler arasında sistemin birçok yerinde kullanılan bir yapımız da varsa maliyet gittikçe artacaktır.
 
-![Alt text](image-21.png)
+Örnek Kod Java
 
 ```java
-public class Person {
-    public String firstName;
-
-    public void sendPasswordResetLink() {
-        ...
+public class BasvuruIslemleri {
+    public string Cek {get; set;}
+    public string Fatura {get; set;}
+    public double Senet {get; set;}
+    public void CekIslem(string CekBilgileri){
+    ...
+    }
+    public void FaturaBas(){
+    ...
+    }
+    public bool SenetKontrol(){
+    ...
     }
 }
 ```
 
-Yukarıdaki diyagrama ve koda baktığımızda Person sınıfı içerisinde sendPasswordResetLink() diye bir metot bulunmaktadır. Bu sınıfın asıl amacı kişilere ait bilgileri tutmaktır, şifre sıfırlama bağlantısı göndermek değil. Birden fazla sorumluluk yüklendiği için olası bir mail gönderme değişikliğinde bu sınıf da etkilenecektir.
-
-Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir.
-
-![Alt text](image-22.png)
+Kod yazımı SRP'ye **uygun değildir**.Bunun yerine aşağıdaki gibi yazılmalıdır.
 
 ```java
-class Person {
-     public String firstName;
+ public class BasvuruIslemleri{
+...
 }
-
-class EmailService {
-    public void sendPasswordResetLink(Person person) {
-        ...
-    }
+public class Cek{
+...
+}
+public class Fatura{
+...
+}
+public class Senet{
+...
 }
 ```
 
 #### O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)
 
-Yapılarımız (sınıf, metot, fonksiyon) gelişime açık değişime kapalı olmalıdır.
+- Esnek tasarımlar yapılmalıdır
+- Yapılarımız (sınıf, metot, fonksiyon) gelişime açık, değişime kapalı olmalıdır.
+- Değişim **sadece yeni kodlar eklenerek** olmalıdır
 
 Yazılımlar için zamanla değişim şüphesiz kaçınılmazdır; değişen iş kuralları, kullanılan harici kütüphaneler gibi başlıca nedenler örnek gösterilebilir. Bu prensibin anlatmak istediği şey yeni bir davranış ya da özellik eklemek istediğimiz durumda; yapmak istediğimiz değişikliği mevcut koda dokunmadan, değişimi sadece yeni kodlar üzerinden sağlamaktır.
 
-![Alt text](image-23.png)
+Örnek Kod Java
 
 ```java
-class Employee {
-    ...
-}
-
-class EmployeeManager {
-    public void addEmployee(Object database, Employee employee) {
-        if (database instanceof OracleDatabase) {
-            ((OracleDatabase) database).addDatabase(employee);
+public class RemoteControl{
+    public void on(Object obj){
+        if(obj instanceof TV){
+            ((TV)obj).tvOn();
+        } else if(obj instanceof CDPlayer){
+            ((CDPlayer)obj).cdOn();
         }
-    }
-}
-
-class OracleDatabase {
-    public void addDatabase(Employee employee) {
-        ...
     }
 }
 ```
 
-Yukarıdaki koda ve diyagrama baktığımız zaman EmployeeManager adında bir sınıfımız mevcut ve gelen Employee sınıfına ait nesneyi veri tabanına kayıt ediyor. Veri tabanına kayıt etmeden önce hangi veri tabanı örneği geldiğini de if-else durumlarında kontrol edip tip dönüşümü sağlamaktadır. Yukarıdaki kod örneği maalesef Open-Closed için uygun değildir. Nedeni ise yeni bir veri tabanı eklenmek istediğinde başka bir if-else durumu açılacaktır, yeni eklenen veri tabanı kontrolü sağlanacaktır ve sürekli mevcut koda bir müdahalede bulunulacaktır. Bunu çözmenin yolu ise genelde soyutlamadan geçmektedir.
-
-Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir. Yeni bir eklemede mevcut koda dokunmaya gerek kalmıyor bu sayede. Kayıt işlemlerini MySQL üzerinde yapmak istediğimiz zaman MySQLDatabase adında bir sınıf oluşturup IDatabase arayüzünü uygulamamız yeterlidir. 🥰
-
-![Alt text](image-24.png)
+Kod yazımı OCP'ye **uygun değildir**. Çünkü eklenen her yeni cihaz için on() metodunda değişiklik yapmamız gerekmektedir. Bunun üstesinden gelmek için aşağıdaki gibi kod yazılmalıdır.
 
 ```java
-class Employee {
-...
-}
-
-interface IDatabase {
-    void addDatabase(Employee employee);
-}
-
-class EmployeeManager {
-    public void addEmployee(IDatabase database, Employee employee) {
-        database.addDatabase(employee);
+public class RemoteControl{
+    private RemoteControlInterface remote;
+    public RemoteControl(RemoteControlInterface _remote){
+        this.remote = _remote;
     }
-}
-
-class OracleDatabase implements IDatabase {
-    @Override
-    public void addDatabase(Employee employee) {
-       ...
+    public void on(){
+        remote.on();
     }
 }
 ```
 
 #### L → LSP (Liskov's Substition Principle)(Likov'un Yerine Geçme Prensibi)
 
+Alt sınıflardan oluşan nesnelerin, üst sınıfın nesneleri ile yer değiştirdiklerinde aynı davranışı sergilemesi gerekmektedir.
+
+Alt sınıflar, üst sınıflardan türediği için onların davranışlarını devralırlar. Eğer üst sınıflara ait davranışları gerçekleştirmiyorlarsa davranışı yapan metotu muhtemelen boş bırakır ya da bir hata fırlatırız fakat bu işlemler kod kirliliğine ve gereksiz kod kalabalığına neden olmaktadır. Bunların yanı sıra projeye daha sonradan dahil olacak geliştiriciler için de sorun oluşturmaktadır. Geliştirici, sistemin sağlıklı yürüdüğünü düşünerek gerçekleştirilmeyen bir davranışı kullanmaya çalışabilir.
+
+Örnek
+![Alt text](image-25.png)
+
+Peki "doldurma" fonksiyonu nereye konulmalıdır?
+Çözüm:
+Liskov prensibine göre ara sınıf koymamız gerekmektedir.
+
+![Alt text](image-26.png)
+
+Örnek Kod Java
+![Alt text](image-31.png)
+
+```java
+abstract class Logger {
+    public abstract void openConnection();
+    public abstract void closeConnection();
+    public abstract void log();
+}
+```
+
+```java
+class DatabaseLogger extends Logger {
+    @Override
+    public void openConnection() {
+        ...
+    }
+
+    @Override
+    public void closeConnection() {
+        ...
+    }
+
+    @Override
+    public void log() {
+        openConnection();
+        // LOG
+        closeConnection();
+    }
+}
+```
+
+yukarıdaki koda baktığımız zaman `DatabaseLogger` sınıfımız, `Logger` adlı sınıftan türemektedir. Başlangıç aşaması için bir problem görünmezken ilerleyen zamanlarda veri tabanı değil de bir dosyaya kayıt işlemi alınacağı zaman aşağıdaki gibi bir görünüm meydana gelecektir.
+![Alt text](image-32.png)
+
+```java
+class FileLogger extends Logger {
+    @Override
+    public void openConnection() {
+        new Exception("Not implemented!");
+    }
+
+    @Override
+    public void closeConnection() {
+        new Exception("Not implemented!");
+    }
+
+    @Override
+    public void log() {
+        // LOG
+    }
+}
+```
+
+bağlantı açma ve kapatma işlemleri veri tabanına aittir, bir dosyaya değil. Gereksiz hata fırlatmaları, kodun okunmasındaki zorluk, kod kalabalığı gibi birçok olaya neden olmaktadır. Burada bu işlemler bir ara sınıfa alınabilir.
+![Alt text](image-33.png)
+
+```java
+abstract class Logger {
+    public abstract void log();
+}
+```
+
+```java
+abstract class ConnectableLogger extends Logger {
+    public abstract void openConnection();
+    public abstract void closeConnection();
+}
+```
+
+```java
+class FileLogger extends Logger {
+    @Override
+    public void log() {
+        // LOG
+    }
+}
+```
+
+```java
+class DatabaseLogger extends ConnectableLogger {
+    @Override
+    public void openConnection() {
+        ...
+    }
+
+    @Override
+    public void closeConnection() {
+        ...
+    }
+
+    @Override
+    public void log() {
+        openConnection();
+        // LOG
+        closeConnection();
+    }
+}
+```
+
 #### I → ISP (Interface Segregation Principle)(Arayüz Ayrımı Prensibi)
 
+Sınıflar, kullanmadığı metotları içeren arayüzleri uygulamaya zorlanmamalıdır.
+
+- Arayüzdeki bazı fonksiyonların implemente edilmemesi isteniyor olabilir.
+- Arayüzde çok fazla fonksiyon olursa kullanılmayan işlemler ortaya çıkıyor olabilir
+  Arayüzlerimizde genel olarak birçok operasyonel işlem barındırabiliriz fakat bu arayüzü uygulayan sınıfların, bazılarını kullanmama durumu olabilmektedir. Bir sınıf birden fazla arayüzü uygulaması özelliğiyle de birlikte bu prensip, bu tür durumlarda arayüzlerin ayrılmasını ve ihtiyaç halinde olanların kullanmasını söylemektedir.
+
+Örnek
+![Alt text](image-27.png)
+
+Çözüm: Arayüz ayrıştırma prensibi uygulamak
+
+![Alt text](image-28.png)
+
+Örnek Kod Java
+![Alt text](image-29.png)
+
+```java
+interface IWorker {
+    void eat() throws Exception;
+
+    void work();
+
+    void pay() throws Exception;
+}
+```
+
+```java
+class RobotWorker implements IWorker {
+
+    @Override
+    public void eat() throws Exception {
+        throw new Exception();
+    }
+
+    @Override
+    public void pay() throws Exception {
+        throw new Exception();
+    }
+
+    @Override
+    public void work() {
+      ...
+    }
+}
+```
+
+Yukarıdaki diyagram incelendiğinde, şirket çalışanları IWorker arayüzünü uygulamaktadır; yemek yeme, ödeme alma, çalışma gibi davranışları gerçekleştirmektedir. Fakat daha sonradan bazı işler robotlar tarafından yapılmaya başlandı ya da dış kaynaktan birileri (outsource) de çalışmaya başladı. Bu durumda bazı davranışlar gerçekleşmeyecektir. Örneğin robotların yemek yeme ya da ödeme alma davranışını gerçekleştirememesi gibi ya da dış kaynaktan gelenlere verilmeyen yemek imkanı. Bu gerçekleşmeyen davranışların içlerini ya boş bırakma ya da hata fırlatma durumunda kalırız. Bu tür durumlarda bu prensip bizlere bu arayüzlerin ayrılmasını ve ihtiyaç halinde olanların kullanılmasını söylemektedir.
+
+Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir. `work()`, `pay()`, `eat()` davranışları başka arayüzlere aktarıldı ve ihtiyaç halinde olanlar uygulandı.
+
+![Alt text](image-30.png)
+
+```java
+interface IWorker {
+    void work();
+}
+```
+
+```java
+interface IEatableWorker {
+    void eat();
+}
+```
+
+```java
+interface IPayableWorker {
+    void pay();
+}
+```
+
+```java
+class Worker implements IWorker, IEatableWorker, IPayableWorker {
+
+    @Override
+    public void eat() {
+        ...
+    }
+
+    @Override
+    public void work() {
+        ...
+    }
+
+    @Override
+    public void pay() {
+        ...
+    }
+}
+```
+
+```java
+class RobotWorker implements IWorker {
+    @Override
+
+    public void work() {
+     ...
+    }
+}
+```
+
 #### D → DIP (Dependency Inversion Principle)(Bağımlılıkların Tersine Çevrilmesi Prensibi)
+
+Yüksek seviye sınıflar, düşük seviye sınıflara bağlı olmamalıdır. Her ikisi de soyutlamalara bağlı olmalıdır.
+
+Soyutlamalar, detaylara bağlı olmamalıdır. Detaylar, soyutlamalara bağlı olmalıdır.
+
+- Yüksek sınıflar: Dışarıya gönderilen veya dışarıdan alınan etkileşim.
+- Alt sınıflar: Veritabanına indikçe alt sınıflar görülür
+
+Örnek Kod Java 1
+
+```java
+public class Stack {
+    public string GetInfoAsHtml() {
+        Finder finder = new Finder();
+        StockInfo[] stocks = finder.FindQuoteInfo();
+        Renderer ir = new Renderer(RenferFormat.Html);
+        return ir.RenderQuoteInfo();
+    }
+}
+```
+
+- Stack doğrudan Finder ve Render'i kullanmaktadır.
+- Bağımlılık çok yüksektir.
+- Birden fazla render veya finder olabilir.
+  ` Çözüm:` Arayüz tasarlamak. IFinder ve IRender nesnesini almalıdır
+
+```java
+class DBFinder:IFinder {
+    public string Find(string name){
+        return name;
+    }
+}
+class ConsoleRender:IRenderer{
+    public void Display(string content){
+        Console.WriteLine(content);
+    }
+}
+class WebRender:IRenderer{
+    public void Display(string content){
+        Console.WriteLine(content);
+    }
+}
+```
+
+```java
+ class Stack{
+    private IFinder fnd;
+    private IRenderer rnd;
+    public Stack(IFinder f, IRenderer r){
+        fnd = f;
+        rnd = r;
+    }
+    public void DisplayStackInfo(string name){
+        rnd.Display(fnd.Find(name));
+    }
+}
+
+class Program{
+    static void Main(string[] args){
+        Stack stk = new Stack(new DBFinder(), new WebRender());
+        stk.DisplayStackInfo("Buzdolabı");
+    }
+}
+```
+
+Örnek Kod Java 2
+![Alt text](image-34.png)
+
+```java
+class ExceptionReporter {
+    private OracleDatabase oracleDatabase;
+
+    public ExceptionReporter() {
+        oracleDatabase = new OracleDatabase();
+    }
+
+    public void reportException(Exception exception) {
+        oracleDatabase.add(exception);
+    }
+}
+
+class OracleDatabase {
+    public void add(Object object) {
+        System.out.println("added :D");
+    }
+}
+```
+
+Yukarıdaki diyagram ve kod incelendiğinde ExceptionReporter sınıfının (yüksek seviyeli sınıf), OracleDatabase sınıfına (düşük seviyeli sınıf) direkt olarak bağımlı olduğu görülmektedir. İleride veri tabanı olarak Oracle değil de MySQL kullanmak istersek maalesef bu sınıfa müdahale etmek zorunda kalacağız. Bu istenmeyen bir davranıştır. Bunun çözümünü ise buradaki bağımlılıkları soyutlayarak sağlayacağız.
+
+Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir.
+![Alt text](image-35.png)
+
+```java
+class ExceptionReporter {
+    private IDatabase database;
+
+    public ExceptionReporter(IDatabase database) {
+        this.database = database;
+    }
+
+    public void reportException(Exception exception) {
+        database.add(exception);
+    }
+}
+
+interface IDatabase {
+    void add(Object object);
+}
+
+class MySQLDatabase implements IDatabase {
+    @Override
+    public void add(Object object) {
+        ...
+    }
+}
+
+class OracleDatabase implements IDatabase {
+    @Override
+
+    public void add(Object object) {
+        ...
+    }
+}
+```
+
+### Access Modifiers (Erişim Belirteçleri)
+
+Erişim belirteçleri class içerisindeki özellik ve metotlar için
+belirlenir. Bu erişim belirteçleri sayesinde bir özellik veya
+metodun diğer classlardan erişilip erişilemeyeceğini belirtir.
+Aşağıda erişim belirteçleri sıralanmıştır;
+
+![Alt text](image-36.png)
+
+```
+Not: Eğer bir özellik veya metodun erişim belirteci
+belirtilmemişse default olarak “private” değerini alır.
+```
+
+![Alt text](image-37.png)
+
+## Constraints (Kısıtlamalar)
+
+#### Nedir?
+
+Veri üzerindeki mantıksal sınırlamalara kısıt adı verilir. Nesnelerdeki alanlara girilen bilgiyi kontrol ederek bilginin güvenilirliğini artırırlar ve veri girişini daha kolay hale getirirler.
+
+## Boxing/Unboxing
+
+**Boxing(Kutulama) :** Primitive type bir değeri sarmalayıcı(wrapper class) sınıf içerisine konulması işlemine denir.
+**Unboxing(Kutudan çıkarma) :** Sarmalayıcı(wrapper class) sınıf içerisinden Primitive type değeri geri çıkarma işlemine denir.
+
+**Primitive Type:** Bir diğer adı ilkel tipler ve değer tiplerdir. Hepimizin bildiği gibi en temel olan byte, int, short, long, char, float ve double gibi değerlere denilmektedir. Ramde stackte tutulmaktadırlar. Herhangi bir metoda parametre olarak gönderildiğinde bir kopyası ile gider ve kopyası üzerinde işlem yapılır.
+
+**Wrapper Type:** Java da bazen bu Primitive tipleri sarmalamak(Wrapping) zorunda kalırız. Örnek olarak eğer bir koleksiyon(collections) kullanacaksak tanımlaması yapılırken bir nesne ile tanımlanmalıdır. Yani int yerine onu başka bir class içerisinde sarmalayarak kullanmalıyız. Java bizim için bu primitive değerleri sarmalanmış hallerini de hazırlamış. Bunlara da Wrapper Type denilmektedir.
+
+![Alt text](image-38.png)
+
+Örnek Kod Java
+
+```java
+public class Main {
+    Integer wrapper = new Integer(10);  // Boxing
+    int ilkel = wrapper.intValue();     // Unboxing
+}
+```
+
+Bu tarz bir kod yazdığınızda IDE bize bu kullanımın deprecated olduğunu söylüyor bunu JAVA güncel versiyonlarıyla kendi içinde çözümlüyor. Bizim bu şekilde kullanmamıza gerek kalmıyor. Direk değerin kendisini verebiliyoruz.
+
+```java
+public class Main {
+    Integer wrapper = 10;   // Boxing
+    int ilkel = wrapper;    // Unboxing
+}
+```
+
+## Property Nedir?
+
+## Constructor Nedir?
 
 ## Kaynakça
 
 [1] - https://github.com/yusufyilmazfr/tasarim-desenleri-turkce-kaynak
 
 [2] - https://tugrulbayrak.medium.com/uml-class-diyagramlari-4c3bb7e9cc4c
+
+[3] - https://emresupcin.com/2012/10/31/constraint-kisitlayici-ve-constraint-turleri-nelerdir/
+
+[4] - https://ufukunal.medium.com/java-boxing-ve-unboxing-kavramlar%C4%B1-8a5109d7a06d#:~:text=Boxing(Kutulama)%20%3A%20Primitive%20type,de%C4%9Feri%20geri%20%C3%A7%C4%B1karma%20i%C5%9Flemine%20denir.
+
+[5] -
