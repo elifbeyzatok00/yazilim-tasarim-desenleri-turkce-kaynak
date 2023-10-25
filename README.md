@@ -819,6 +819,28 @@ Agile bir proje yönetim metodolojisi olarak tanımlanabilir. Farklı disiplinle
 
 Bu konu ile ilgili sunumu incelemek için [buraya](https://www.canva.com/design/DAFw1kSJ3vk/fTo0fvSROhmkWpz_Gs1cuQ/edit?utm_content=DAFw1kSJ3vk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) tıklayınız.
 
+### Çevik Modelde Yazılım Yaşam Dönüsünü Sağlamak İçin Hangi Araçlar Kullanılıyor?
+
+Çevik modelde yazılım yaşam döngüsünü yönetmek için birçok araç ve platform bulunmaktadır. Bunlar, işbirliğini artırmak, görevleri takip etmek, süreçleri yönetmek, geri bildirimleri almak ve proje sürecini izlemek için kullanılır.
+
+1. Trello: Trello, görevleri kartlar şeklinde düzenlemeye ve taşımaya dayalı bir proje yönetim aracıdır. Takım üyeleri, görevleri ve projeyi kartlarla organize edebilirler.
+
+2. Asana: Asana, projeleri ve görevleri planlamak, organize etmek ve izlemek için kullanılan bir platformdur. Görevleri takip etmek, önceliklendirmek ve süreci görselleştirmek için kullanışlıdır.
+
+3. VersionOne: VersionOne, çevik yazılım geliştirme süreçlerini yönetmek için kullanılan bir platformdur. Backlog yönetimi, planlama, takım işbirliği ve raporlama gibi özelliklere sahiptir.
+
+4. Targetprocess: Targetprocess, çeşitli ölçeklerdeki projeleri yönetmek için kullanılan bir çevik yönetim aracıdır. Scrum, Kanban, XP ve diğer çevik süreçleri destekler.
+
+5. Clubhouse: Clubhouse, yazılım geliştirme süreçlerini yönetmek için kullanılan basit ve esnek bir araçtır. Görevleri, epikleri ve kullanıcı hikayelerini izlemek için kullanılır.
+
+6. Pivotal Tracker: Pivotal Tracker, çevik yazılım geliştirme süreçlerini yönetmek için kullanılan bir platformdur. Proje özelliklerini, hikayeleri ve görevleri izlemek için kullanılır.
+
+7. Basecamp: Basecamp, proje yönetimi ve işbirliği için kullanılan bir platformdur. Proje görevlerini, dosyaları ve takvimleri yönetmek için kullanılır.
+
+8. Monday.com: Monday.com, takımların işlerini planlamak, izlemek ve yönetmek için kullanılan bir işbirliği platformudur. Özelleştirilebilir panolar ve otomatik bildirimler gibi özelliklere sahiptir.
+
+Bu araçlar, çevik ekiplerin projelerini daha etkili bir şekilde yönetmelerine yardımcı olabilir. Hangi aracın kullanılacağı, projenin özel gereksinimlerine, takımın tercihlerine ve bütçeye bağlı olarak değişebilir.
+
 ## Değer Tipi, Referans Tipi, Steak, Heap Nedir/Nasıl Çalışır?
 
 Değer tipi (value type) ve referans tipi (reference type), programlama dillerinde veri türlerini temsil eden iki önemli kavramdır. Bu terimler, bir programın bellek yönetimi ve veri depolama şekli ile ilgilidir. Ayrıca, "stack" ve "heap" terimleri, bellek yönetimiyle ilişkilendirilen iki farklı bellek bölgesini temsil eder.
@@ -1725,6 +1747,44 @@ if __name__ == "__main__":
     main()
 
 ```
+
+### Yazılım Tasarım Gereksinimleri Proje Geliştirme Modelleri Nedir, Nasıl Uygulanır?
+
+Yazılım tasarım gereksinimleri ve proje geliştirme modelleri, bir yazılım projesini planlama, geliştirme ve yönetme süreçlerinde kullanılan temel kavramlardır. İşte bu iki konseptin anlamları ve nasıl uygulandığına dair genel bir bakış:
+
+#### Yazılım Tasarım Gereksinimleri:
+
+Yazılım tasarım gereksinimleri, bir yazılım ürününün fonksiyonel ve teknik özelliklerini belirleyen belgeler ve özelliklerdir. Bu gereksinimler, yazılım projesinin amacını, kapsamını, kullanıcı beklentilerini, performans gereksinimlerini, güvenlik gereksinimlerini ve diğer teknik detayları tanımlar. Yazılım tasarım gereksinimleri oluşturulurken genellikle şu adımlar izlenir:
+
+1. **Gereksinim Toplama:** Müşteri, kullanıcılar ve diğer ilgili paydaşlarla görüşmeler yaparak gereksinimler toplanır.
+2. **Analiz ve Belgeleme:** Toplanan gereksinimler analiz edilir ve belgelendirilir. Bu süreçte gereksinimler netleştirilir ve anlaşılır bir dille ifade edilir.
+3. **Onay ve Kabul:** Belirlenen gereksinimler müşteri veya proje sahibi tarafından onaylanır ve proje geliştirme sürecine geçilmeden önce kabul edilir.
+
+#### Proje Geliştirme Modelleri:
+
+Proje geliştirme modelleri, bir yazılım projesinin farklı aşamalarını ve bu aşamalar arasındaki ilişkileri tanımlayan yapısal yaklaşımlardır. Farklı projelerin farklı gereksinimlere ve koşullara uygun olarak seçebileceği birkaç yaygın proje geliştirme modeli bulunmaktadır:
+
+1. **Su Çiçeği Modeli (Waterfall Model):** Bu modelde, proje aşamaları sırasıyla gerçekleştirilir. Bir aşama tamamlandığında diğerine geçilir. Değişiklikler için esneklik sağlamaz.
+
+2. **Çevik Geliştirme (Agile Development):** Çevik geliştirme, esnek, yinelemeli ve müşteri odaklı bir yaklaşım benimser. Küçük ölçekli geliştirmeler yapar, sürekli geri bildirim alır ve hızlı adaptasyon sağlar.
+
+3. **Prototip Model:** Bu modelde, kullanıcılarla etkileşime girmek amacıyla hızlı prototipler geliştirilir. Bu prototipler, gerçek gereksinimlerin anlaşılmasına ve geliştirme sürecinin yönlendirilmesine yardımcı olur.
+
+4. **Spiral Model:** Spiral model, projenin risk analizi ve yönetimi üzerine odaklanır. Proje süreci döngüler halinde ilerler; her döngüde bir önceki aşamadan elde edilen deneyimlere dayanarak yeni bir aşamaya geçilir.
+
+5. **RAD (Rapid Application Development):** RAD, hızlı prototipler kullanarak hızlı bir şekilde yazılım geliştirmeyi amaçlar. Süreç, müşteri katılımını ve geri bildirimi maksimize etmeye odaklanır.
+
+Bu modellerden hangisinin seçileceği, proje gereksinimlerine, bütçeye, zaman çizelgesine, ekibe ve diğer faktörlere bağlıdır. Her modelin kendi avantajları ve dezavantajları bulunur; bu yüzden doğru modelin seçimi proje başarısı için kritik öneme sahiptir.
+
+### Artırımlı Model Nedir?
+
+Artırımlı model veya "Incremental Model", yazılım geliştirme sürecini küçük ve yönetilebilir artışlar (inkrementler) halinde ayrı ayrı geliştiren bir geliştirme modelidir. Bu modelde, yazılımın her bir artışı (inkrement) belirli bir süreç içerisinde geliştirilir ve sonrasında var olan sisteme eklenir. Her artış, sistemin önceki sürümüne göre yeni bir özelliği temsil eder veya mevcut bir özelliği geliştirir.
+
+Artırımlı model, **genellikle büyük ve karmaşık projeler için kullanılır**. Büyük projelerde, tüm yazılımın tek seferde geliştirilmesi ve teslim edilmesi riskli olabilir. Bunun yerine, projeyi daha küçük, yönetilebilir parçalara bölmek ve her bir parçayı artırımlı olarak geliştirmek, hataların erken aşamada tespit edilmesine ve müşteri geri bildiriminin daha erken alınmasına olanak tanır.
+
+**Artırımlı model, özellikle müşterinin ihtiyaçlarının değişken olduğu, projenin büyük ve karmaşık olduğu durumlarda tercih edilebilir**. Bu model, **esneklik ve müşteri geri bildirimine verilen önem açısından Agile geliştirme metodolojileriyle benzerlik gösterir**.
+
+### Çevik Modelde Yazılım Yaşam Dönüsünü Sağlamak İçin Neler Kullanılıyor?
 
 ## Kaynakça
 
