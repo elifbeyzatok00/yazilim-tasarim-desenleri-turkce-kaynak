@@ -1704,11 +1704,34 @@ Programlama dili değildir. Diyagram çizme ve ilişkisel modelleme dilidir
 
 #### 4+1 Bakış Açısı: Farklı aşamalarda farklı UML diyagramları.
 
+<!--
 1. Kullanıcı Bakışı (User View) → Use - Case
 2. Yapısal Bakış (Structural View) → Class
 3. Davranış Bakışı (Behavioral View)
 4. Gerçekleme Bakışı (Implementation View)
 5. Ortam Bakışı (Environment View)
+-->
+
+1. Kullanım Durumu Perspektifi (Use Case Perspective):
+
+Kullanıcıların sistemi nasıl kullanacağını ve sistemin dış dünyayla nasıl etkileşimde bulunacağını tanımlar.
+Kullanım durumu (use case) diyagramları ve senaryoları gibi araçlar kullanılarak temsil edilir.
+
+2. Mimari Perspektif (Logical Perspective):
+   Sistemin genel yapısını, bileşenlerini ve bu bileşenler arasındaki ilişkileri tanımlar.
+   Sınıf diyagramları, nesne diyagramları, durum diyagramları gibi araçlar kullanılarak temsil edilir.
+
+3. Implementasyon Perspektifi (Implementation Perspective):
+   Sistemin nasıl uygulandığını, bileşenlerin nasıl yazılım koduna dönüştürüldüğünü ve bunların nasıl paketlendiğini tanımlar.
+   Paket diyagramları, bileşen diyagramları gibi araçlar kullanılarak temsil edilir.
+
+4. İşlemler Perspektifi (Process Perspective):
+   Sistemin çalışma zamanında nasıl davrandığını, içsel işlemlerini ve bu işlemler arasındaki etkileşimleri tanımlar.
+   Etkinlik diyagramları gibi araçlar kullanılarak temsil edilir.
+
+5. Senaryo Perspektifi (Scenarios Perspective):
+   Kullanım durumları ve diğer perspektifler arasındaki etkileşimleri gösteren örnek senaryoları içerir.
+   Senaryolar, sistem davranışını gerçek dünya senaryoları üzerinden açıklamak için kullanılır.
 
 #### UML Modelleri 3 tip sınıf kategorisinde sınıflandırılabilir:
 
