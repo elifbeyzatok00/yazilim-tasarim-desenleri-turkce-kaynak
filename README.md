@@ -599,101 +599,6 @@ ucgen.ciz()
 
 Bu örneklerde, Sekil soyut sınıf (abstract class) olarak tanımlanmıştır. Soyut sınıflar soyut metotlar (abstract methods) içerebilir. Soyut metotlar sadece imza (signature) olarak tanımlanır, yani metotun gövdesi soyut sınıf içinde yer almaz. Soyut metotları olan bir sınıf, bu metotları miras alan alt sınıflar tarafından zorunlu olarak implemente edilmelidir. Bu, soyutlamayı (abstraction) sağlayan bir özelliktir.
 
-## UML(Unified Modeling Language) nedir?
-
-UML, bir sistemin tasarımını görselleştirmek için yazılım mühendisliği alanında genel amaçlı modelleme dilidir. Yazılı bir dil değildir. Farklı amaçlar için kategorilere ayrılmış olsa da, genel itibariyle modelleme için kullanılır. 1995 yılında, yazılımlarda bir standart yaklaşım oluşturmak için geliştirilmiştir. Yani UML diyagramları ile önceden modellediğiniz bir yazılım projesini, modele uygun olacak şekilde herhangi bir dil ile geliştirebiliyorsunuz. Bu da yazılım mühendisleri arasında ortak bir dil oluşturuyor. İlk çıktığı zamandan beri sürekli geliştirme göstererek, birçok farklı dala ayrılmıştır. Aşağıda UML diyagramlarının kategorilerini görebiliyoruz.
-
-![Alt text](image-5.png)
-
-Yazılım yaşam döngüsünün **Analiz-Tasarım** aşamalarında oluşturulur.
-Analiz → Kullanım senaryosu
-Tasarım → Sınıf diyagramı
-Programlama dili değildir. Diyagram çizme ve ilişkisel modelleme dilidir
-
-![Alt text](image-4.png)
-
-#### 4+1 Bakış Açısı: Farklı aşamalarda farklı UML diyagramları.
-
-1. Kullanıcı Bakışı (User View) → Use - Case
-2. Yapısal Bakış (Structural View) → Class
-3. Davranış Bakışı (Behavioral View)
-4. Gerçekleme Bakışı (Implementation View)
-5. Ortam Bakışı (Environment View)
-
-#### UML Modelleri 3 tip sınıf kategorisinde sınıflandırılabilir:
-
-1. Dinamik Davranışsal (Behavioural) Modelleme
-
-- Sequence (Etkileşim)
-  Yazılım Tasarımı ve Mimarisi 13
-- Communication (İletişim)
-- State (Durum)
-- Activity (Faaliyet)
-- Timing (Zamanlama)
-
-2. Statik Yapısal (Structural) Modelleme
-
-- Class (Sınıf)
-- Object (Nesne)
-- Deployment (Dağıtım)
-- Composite Structure (Bileşke Yapı)
-- Component (Bileşen)
-
-3. İşlevsel (Functional) Modelleme
-
-- Use-Case (Kullanım Senaryosu)
-
-## Use-Case Diyagramları
-
-- daha çok analiz aşamasında aktivite diyagramlarıyla birlikte kullanılır.
-- Sistemde yapılması gereken işler nelerdir?
-- Use case ile aktör arası ilişki: **association**
-  Düz çizgi ile ifade edilir.
-- Use case'ler arası ilişki: **dependency**
-  Kesik çizgi ile ifade edilir.
-
-![Alt text](image-6.png)
-
-### Use-case'ler arası ilişkiler:
-
-1. Ürün eklenmesi <<uses>> Ürün varlığı kontrolü
-2. Kullanılmayan ürünlerin silinmesi <<extend>> Ürün silinmesi
-3. Ödeme <<include>> Kimlik sınama
-
-![Alt text](image-7.png)
-
-## Sınıf-Nesne Diyagramları
-
-OOP için geliştirilmiştir.
-
-Class diyagramları, OOP(Nesne Tabanlı Programlama) temel alınarak tasarlanmıştır. Amaç yazılımımız içindeki sınıflar ve aralarındaki ilişkileri tanımlamaktır.
-
-Örnek Kod Java
-
-```java
-class Animal {
-     private String name;
-     private int id;
-     private int age;
-     public void setName(String name){
-         this.name=name;
-     }
-     public void eat() {
-         System.out.println("Eating");
-     }
-}
-```
-
-Animal sınıfını Java’da bu şekilde yazdık. Peki biz bu sınıfı tüm diğer nesne tabanlı dillerde yazabilecek şekilde ifade etmek isteseydik? Yani diğer yazılımcıların da anlayacağı bir dilde yazsaydık. İşte o zaman sınıf diyagramında ifade etmemiz gerekirdi.
-
-![Alt text](image-10.png)
-
-- Üstte “Attributes” yani sınıfa ait nitelikler(örneğin isim, yaz, id bilgisi),
-- Alt kısımda sınıfa ait metodlar bulunuyor.
-- İfadelerin solunda bulunan “-” işareti ise access modifier(erişim niteleyicisi). Yani o niteliğin default, public, private ya da protected olduğunu gösteriyor.
-- Sınıf abstract olsaydı Animal yerine Animal şeklinde italik yazarak ifade edebilirdik ya da <<abstract>> şeklinde altına yazabilirdik.
-- Aynı şekilde bir interface içinse <<interface>> şeklinde belirtiriz.
-
 ## Access modifiers
 
 Public → +
@@ -1784,7 +1689,104 @@ Artırımlı model, **genellikle büyük ve karmaşık projeler için kullanıl�
 
 **Artırımlı model, özellikle müşterinin ihtiyaçlarının değişken olduğu, projenin büyük ve karmaşık olduğu durumlarda tercih edilebilir**. Bu model, **esneklik ve müşteri geri bildirimine verilen önem açısından Agile geliştirme metodolojileriyle benzerlik gösterir**.
 
-### Çevik Modelde Yazılım Yaşam Dönüsünü Sağlamak İçin Neler Kullanılıyor?
+## UML(Unified Modeling Language) nedir?
+
+UML, bir sistemin tasarımını görselleştirmek için yazılım mühendisliği alanında genel amaçlı modelleme dilidir. Yazılı bir dil değildir. Farklı amaçlar için kategorilere ayrılmış olsa da, genel itibariyle modelleme için kullanılır. 1995 yılında, yazılımlarda bir standart yaklaşım oluşturmak için geliştirilmiştir. Yani UML diyagramları ile önceden modellediğiniz bir yazılım projesini, modele uygun olacak şekilde herhangi bir dil ile geliştirebiliyorsunuz. Bu da yazılım mühendisleri arasında ortak bir dil oluşturuyor. İlk çıktığı zamandan beri sürekli geliştirme göstererek, birçok farklı dala ayrılmıştır. Aşağıda UML diyagramlarının kategorilerini görebiliyoruz.
+
+![Alt text](image-5.png)
+
+Yazılım yaşam döngüsünün **Analiz-Tasarım** aşamalarında oluşturulur.
+Analiz → Kullanım senaryosu
+Tasarım → Sınıf diyagramı
+Programlama dili değildir. Diyagram çizme ve ilişkisel modelleme dilidir
+
+![Alt text](image-4.png)
+
+#### 4+1 Bakış Açısı: Farklı aşamalarda farklı UML diyagramları.
+
+1. Kullanıcı Bakışı (User View) → Use - Case
+2. Yapısal Bakış (Structural View) → Class
+3. Davranış Bakışı (Behavioral View)
+4. Gerçekleme Bakışı (Implementation View)
+5. Ortam Bakışı (Environment View)
+
+#### UML Modelleri 3 tip sınıf kategorisinde sınıflandırılabilir:
+
+1. Dinamik Davranışsal (Behavioural) Modelleme
+
+- Sequence (Etkileşim)
+  Yazılım Tasarımı ve Mimarisi 13
+- Communication (İletişim)
+- State (Durum)
+- Activity (Faaliyet)
+- Timing (Zamanlama)
+
+2. Statik Yapısal (Structural) Modelleme
+
+- Class (Sınıf)
+- Object (Nesne)
+- Deployment (Dağıtım)
+- Composite Structure (Bileşke Yapı)
+- Component (Bileşen)
+
+3. İşlevsel (Functional) Modelleme
+
+- Use-Case (Kullanım Senaryosu)
+
+## Use-Case Diyagramları
+
+- daha çok analiz aşamasında aktivite diyagramlarıyla birlikte kullanılır.
+- Sistemde yapılması gereken işler nelerdir?
+- Use case ile aktör arası ilişki: **association**
+  Düz çizgi ile ifade edilir.
+- Use case'ler arası ilişki: **dependency**
+  Kesik çizgi ile ifade edilir.
+
+![Alt text](image-6.png)
+
+### Use-case'ler arası ilişkiler:
+
+1. Ürün eklenmesi <<uses>> Ürün varlığı kontrolü
+2. Kullanılmayan ürünlerin silinmesi <<extend>> Ürün silinmesi
+3. Ödeme <<include>> Kimlik sınama
+
+![Alt text](image-7.png)
+
+## Sınıf-Nesne Diyagramları
+
+OOP için geliştirilmiştir.
+
+Class diyagramları, OOP(Nesne Tabanlı Programlama) temel alınarak tasarlanmıştır. Amaç yazılımımız içindeki sınıflar ve aralarındaki ilişkileri tanımlamaktır.
+
+Örnek Kod Java
+
+```java
+class Animal {
+     private String name;
+     private int id;
+     private int age;
+     public void setName(String name){
+         this.name=name;
+     }
+     public void eat() {
+         System.out.println("Eating");
+     }
+}
+```
+
+Animal sınıfını Java’da bu şekilde yazdık. Peki biz bu sınıfı tüm diğer nesne tabanlı dillerde yazabilecek şekilde ifade etmek isteseydik? Yani diğer yazılımcıların da anlayacağı bir dilde yazsaydık. İşte o zaman sınıf diyagramında ifade etmemiz gerekirdi.
+
+![Alt text](image-10.png)
+
+- Üstte “Attributes” yani sınıfa ait nitelikler(örneğin isim, yaz, id bilgisi),
+- Alt kısımda sınıfa ait metodlar bulunuyor.
+- İfadelerin solunda bulunan “-” işareti ise access modifier(erişim niteleyicisi). Yani o niteliğin default, public, private ya da protected olduğunu gösteriyor.
+- Sınıf abstract olsaydı Animal yerine Animal şeklinde italik yazarak ifade edebilirdik ya da <<abstract>> şeklinde altına yazabilirdik.
+- Aynı şekilde bir interface içinse <<interface>> şeklinde belirtiriz.
+
+## UML 4+1 Diyagramları
+
+Bu konu ile ilgili sunumu incelemek için [buraya](https://www.canva.com/design/DAFyOSzCYv4/-GI1C07IhEb7r-khcS9wbA/edit?utm_content=DAFyOSzCYv4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) tıklayınız.
 
 ## Kaynakça
 
