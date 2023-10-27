@@ -1,4 +1,4 @@
-## Laboratuvar Derslerinde Aldığım Notlar
+# Laboratuvar Derslerinde Aldığım Notlar
 
 **Sınıf:** şablonlardır
 **Nesne:** sınıflardan oluşur
@@ -114,4 +114,307 @@ Bu sayede alt sınıflar üst sınıflar gibi davranabilir
 
 > constructor içinde değil set get içinde sınır, koşul tanımlamalıyız.
 
-### Hata Kodları
+### **`Inheritance(Miras Alma) Örneği | Java`**
+
+> Java'da kalıtım ile bir sınıfın değişkenlerine ve metotlarına erişilmesine "miras alma" denir (inheritance). Miras alma, bir sınıfın özelliklerini (değişkenler ve metotlar) başka bir sınıfa aktarmak için kullanılır.
+>
+> Bir sınıfın başka bir sınıftan miras alabilmesi için **extends** anahtar kelimesi kullanılır. **Miras alınan sınıf, superclass (üst sınıf)** olarak adlandırılırken, **miras alan sınıf ise subclass (alt sınıf)** olarak adlandırılır.
+
+Örneğin, aşağıdaki örnekte Araba sınıfı Renault sınıfına miras vermektedir. Bu durumda Renault sınıfı, Araba sınıfının değişkenlerine ve metotlarına erişebilir.
+
+`Örnek Kod Java`
+
+```java
+// Üst sınıf (Superclass)
+class Araba {
+    String marka;
+
+    void calis() {
+        System.out.println("Araba çalışıyor.");
+    }
+}
+
+// Alt sınıf (Subclass)
+class Renault extends Araba {
+    void ozellikleriGoster() {
+        System.out.println("Marka: " + marka);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Renault renault = new Renault();
+        renault.marka = "Renault";
+        renault.calis(); // Araba çalışıyor.
+        renault.ozellikleriGoster(); // Marka: Renault
+    }
+}
+```
+
+Yukarıdaki örnekte, Renault sınıfı, Araba sınıfının marka değişkenine ve calis() metotuna erişebiliyor. Bu, kalıtım sayesinde sağlanır ve nesne yönelimli programlamada önemli bir kavramdır.
+
+`Örnek Kod C#`
+
+```cs
+using System;
+
+// Üst sınıf (Superclass)
+class Araba {
+    public string Marka { get; set; }
+
+    public void Calis() {
+        Console.WriteLine("Araba çalışıyor.");
+    }
+}
+
+// Alt sınıf (Subclass)
+class Renault : Araba {
+    public void OzellikleriGoster() {
+        Console.WriteLine("Marka: " + Marka);
+    }
+}
+
+class Program {
+    static void Main(string[] args) {
+        Renault renault = new Renault();
+        renault.Marka = "Renault";
+        renault.Calis(); // Araba çalışıyor.
+        renault.OzellikleriGoster(); // Marka: Renault
+    }
+}
+
+```
+
+`Örnek Kod Python`
+
+```python
+# Üst sınıf (Superclass)
+class Araba:
+    def __init__(self):
+        self.marka = ""
+
+    def calis(self):
+        print("Araba çalışıyor.")
+
+# Alt sınıf (Subclass)
+class Renault(Araba):
+    def ozellikleri_goster(self):
+        print("Marka: " + self.marka)
+
+# Ana program
+renault = Renault()
+renault.marka = "Renault"
+renault.calis() # Araba çalışıyor.
+renault.ozellikleri_goster() # Marka: Renault
+
+```
+
+### Java'da Karşılaşabileceğiniz Bazı Yaygın Hata Kodları
+
+1. ClassCastException
+   Bu hata, bir nesneyi beklenen türde bir nesneye dönüştürmeye çalıştığınızda ortaya çıkar.
+   > **Üst sınıfın referansı alt sınıfa atanabilir.** Ama alt sınıflar daha fazla özelliğe sahip bu nedenle üst sınıfın referansı alt sınıfın özelliklerini kullanamaz.
+   > Yani **alt sınıfın referansı üst sınıfa atanamaz.**
+   > Bu nedenle ClassCastException alırız.
+
+`Örnek Kod Java`
+
+```java
+class Sekil { }
+class Dikdortgen extends Sekil { }
+
+public class Main {
+    public static void main(String[] args) {
+        Sekil sekil = new Dikdortgen();
+        // Burada Dikdortgen tipindeki nesneyi Sekil tipine dönüştürmeye çalışıyoruz.
+        // Dikdortgen, Sekil'in alt sınıfı
+        // üst sınıfın referansı alt sınıfa atanabilir. ama alt sınıflar daha fazla özelliğe sahip bu nedenle üst sınıfın referansı alt sınıfın özelliklerini kullanamaz. Yani alt sınıfın referansı üst sınıfa atanamaz.
+        // Bu nedenle ClassCastException alırız.
+        Dikdortgen dikdortgen = (Dikdortgen) sekil; // Hata: ClassCastException
+    }
+}
+
+```
+
+2. NullPointerException
+   Bu hata, bir nesnenin değeri null iken bu nesneye erişmeye çalıştığınızda ortaya çıkar.
+
+`Örnek Kod Java`
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        // null değere sahip bir nesneye erişmeye çalışıyoruz, bu yüzden NullPointerException alırız.
+        int uzunluk = str.length(); // Hata: NullPointerException
+    }
+}
+```
+
+3. ArrayIndexOutOfBoundsException
+   Bu hata, bir dizi içinde geçerli olmayan bir indeksi kullanmaya çalıştığınızda ortaya çıkar.
+
+`Örnek Kod Java`
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3};
+        // Dizi sadece 0, 1 ve 2 indislerine sahiptir.
+        // 3. indis geçerli değil, bu yüzden ArrayIndexOutOfBoundsException alırız.
+        int number = numbers[3]; // Hata: ArrayIndexOutOfBoundsException
+    }
+}
+```
+
+4. ArithmeticException
+   Bu hata, matematiksel bir işlem sonucunda geçerli olmayan bir değeri kullanmaya çalıştığınızda ortaya çıkar.
+
+`Örnek Kod Java`
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 0;
+        // Bir sayıyı sıfıra bölmeye çalıştığımızda ArithmeticException alırız.
+        int sonuc = a / b; // Hata: ArithmeticException
+    }
+}
+
+```
+
+Bu hatalar, kodunuzda oluşabilecek yaygın hata senaryolarını temsil eder. Uygulamanızda bu hatalarla başa çıkmak için uygun hata yönetimi (exception handling) tekniklerini kullanmanız önemlidir.
+
+### Hata Yönetimi (Exception Handling) Teknikleri
+
+> Hata yönetimi (exception handling), bir programın çalışma sırasında ortaya çıkan hataları kontrol etmek, işlemek ve programın beklenmeyen durumlarla başa çıkmasını sağlamak için kullanılan bir yazılım tekniktir. Hata yönetimi, programın güvenilirliğini artırır ve uygulamanın düzgün bir şekilde çalışmasını sağlar. Java, C#, Python ve birçok modern programlama dilinde hata yönetimini yönetmek için benzer teknikler kullanılır.
+
+İşte hata yönetimi için kullanılan bazı temel teknikler:
+
+**1. Try-Catch Blokları:**
+Try-catch blokları, belirli bir kod bloğunu denemeye (try) alır ve bu blok içinde oluşabilecek hataları ele almak için bir catch bloğu ile eşleştirir. Eğer try bloğu içinde bir hata oluşursa, ilgili catch bloğu çalışır.
+
+`Örnek Kod Java`
+
+```java
+try {
+    // Riskli kod bloğu
+    // ...
+} catch (Exception e) {
+    // Hata durumunda çalışacak kod
+    // ...
+}
+
+```
+
+`Örnek Kod C#`
+
+```cs
+try {
+    // Riskli kod bloğu
+    // ...
+} catch (Exception ex) {
+    // Hata durumunda çalışacak kod
+    // ...
+}
+
+
+```
+
+`Örnek Kod Python`
+
+```python
+try:
+    # Riskli kod bloğu
+    # ...
+except Exception as e:
+    # Hata durumunda çalışacak kod
+    # ...
+
+```
+
+**2. Finally Bloğu:**
+
+> Finally bloğu, try-catch bloklarının ardından yer alabilir. Bu blok, try bloğu çalıştırıldığında veya bir hata oluştuğunda çalıştırılacak kodları içerir. Finally bloğu, kodun temizlenmesi, kaynakların serbest bırakılması gibi işlemler için kullanılır.
+
+`Örnek Kod Java`
+
+```java
+try {
+    // Riskli kod bloğu
+    // ...
+} catch (Exception e) {
+    // Hata durumunda çalışacak kod
+    // ...
+} finally {
+    // Her durumda çalışacak kod
+    // ...
+}
+
+```
+
+`Örnek Kod C#`
+
+```cs
+try:
+    # Riskli kod bloğu
+    # ...
+except Exception as e:
+    # Hata durumunda çalışacak kod
+    # ...
+finally:
+    # Her durumda çalışacak kod
+    # ...
+
+
+```
+
+`Örnek Kod Python`
+
+```python
+try {
+    // Riskli kod bloğu
+    // ...
+} catch (Exception ex) {
+    // Hata durumunda çalışacak kod
+    // ...
+} finally {
+    // Her durumda çalışacak kod
+    // ...
+}
+
+
+```
+
+**3. Throw İfadesi:**
+
+> Throw ifadesi, belirli bir durumda bir hata oluşturmak için kullanılır. Bu, programcının özel bir hata durumunu belirtmesine ve bunu programın dışında ele almasına olanak tanır.
+
+`Örnek Kod Java`
+
+```java
+if (hataDurumu) {
+    throw new Exception("Bir hata oluştu.");
+}
+
+```
+
+`Örnek Kod C#`
+
+```cs
+if (hataDurumu) {
+    throw new Exception("Bir hata oluştu.");
+}
+
+
+```
+
+`Örnek Kod Python`
+
+```python
+if hata_durumu:
+    raise Exception("Bir hata oluştu.")
+
+
+```
