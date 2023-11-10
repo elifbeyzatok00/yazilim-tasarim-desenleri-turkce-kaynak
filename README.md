@@ -803,12 +803,16 @@ Bunları yapmamızı sağlayan prensipleri 5 madde içerisinde inceleyeceğiz.
 
 **S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)**
 Her birimin tek bir sorumluluğu olmalıdır.
+
 **O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)**
 Geliştirilmeye açık, değişikliğe kapalı olmalıdır.
+
 **L → LSP (Liskov's Substition Principle)(Likov'un Yerine Geçme Prensibi)**
 Alt sınıf, üst sınıfın yerine geçtiğinde aynı davranışı göstermelidir.
+
 **I → ISP (Interface Segregation Principle)(Arayüz Ayrımı Prensibi)**
 Belirli işlemleri yapan interface'ler oluşturulmalıdır.
+
 **D → DIP (Dependency Inversion Principle)(Bağımlılıkların Tersine Çevrilmesi Prensibi)**
 Bağımlılıklar soyut sınıflara doğru olmalıdır
 
