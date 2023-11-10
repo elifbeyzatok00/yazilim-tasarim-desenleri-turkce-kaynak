@@ -7,8 +7,6 @@ public class App {
         k1.setFaturaAdres(adres);
         k1.setKargoAdres(adres);
 
-        // System.out.println(k1);
-
         GirisIslemleri giris = new GirisIslemleri(k1);
         giris.girisYap();
 
