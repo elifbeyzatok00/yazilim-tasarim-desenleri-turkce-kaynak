@@ -12,7 +12,7 @@
         -[Polymorphism (Çok biçimlilik)](#Polymorphism (Çok biçimlilik))
         -[Abstraction (Soyutlama)](#Abstraction (Soyutlama))
 3. [Access modifiers](#Access-modifiers)
-4. [UML’de ilişkilerin listesi](#UML’de-ilişkilerin-listesi-şu-şekilde:)
+4. [UML’de ilişkilerin listesi](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/blob/main/README.md#umlde-ili%C5%9Fkilerin-listesi-%C5%9Fu-%C5%9Fekilde)
 5. [İyi Bir Tasarım](#İyi-Bir-Tasarım)
    1. [Esnemezlik (Rijidite)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#1-esnemezlik-rijidite)
    2. [Kırılganlık (Fragility)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#2-k%C4%B1r%C4%B1lganl%C4%B1k-fragility)
