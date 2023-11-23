@@ -832,6 +832,7 @@ Heap bellek bölgesi, genellikle **referans tipleri için dinamik bellek tahsisi
 ![Alt text](image-18.png)
 
 ![Alt text](image-20.png)
+
 int, short, long, byte, float, double, decimal, char, bool => değer tipi
 string, diziler, class, interface, enum, struct => referans tipi
 
@@ -951,7 +952,7 @@ public class RemoteControl{
 }
 ```
 
-#### L → LSP (Liskov's Substition Principle)(Likov'un Yerine Geçme Prensibi)
+#### L → LSP (Liskov's Substition Principle)(Liskov'un Yerine Geçme Prensibi)
 
 Alt sınıflardan oluşan nesnelerin, üst sınıfın nesneleri ile yer değiştirdiklerinde aynı davranışı sergilemesi gerekmektedir.
 
@@ -968,7 +969,7 @@ Liskov prensibine göre ara sınıf koymamız gerekmektedir.
 
 Örnek Kod Java
 
-![Alt text](image-31.png)
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/06f02a1a-79a0-4c1f-968e-04c2e3b7544b)
 
 ```java
 abstract class Logger {
