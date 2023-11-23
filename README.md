@@ -1001,7 +1001,9 @@ class DatabaseLogger extends Logger {
 ```
 
 yukarıdaki koda baktığımız zaman `DatabaseLogger` sınıfımız, `Logger` adlı sınıftan türemektedir. Başlangıç aşaması için bir problem görünmezken ilerleyen zamanlarda veri tabanı değil de bir dosyaya kayıt işlemi alınacağı zaman aşağıdaki gibi bir görünüm meydana gelecektir.
-![Alt text](image-32.png)
+
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/7cb209f3-3aed-4981-bfc2-562a39da09c2)
+
 
 ```java
 class FileLogger extends Logger {
@@ -1023,7 +1025,9 @@ class FileLogger extends Logger {
 ```
 
 bağlantı açma ve kapatma işlemleri veri tabanına aittir, bir dosyaya değil. Gereksiz hata fırlatmaları, kodun okunmasındaki zorluk, kod kalabalığı gibi birçok olaya neden olmaktadır. Burada bu işlemler bir ara sınıfa alınabilir.
-![Alt text](image-33.png)
+
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/0d8b40bd-8424-4f29-83f6-0a4e53534d22)
+
 
 ```java
 abstract class Logger {
