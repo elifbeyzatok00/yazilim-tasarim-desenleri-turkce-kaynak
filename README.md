@@ -11,7 +11,6 @@
         -[Inheritance (Kalıtım)](#Inheritance (Kalıtım))
         -[Polymorphism (Çok biçimlilik)](#Polymorphism (Çok biçimlilik))
         -[Abstraction (Soyutlama)](#Abstraction (Soyutlama))
-4. [Sınıf](#Sınıf)
 5. [Access modifiers](#Access-modifiers)
 6. [UML’de ilişkilerin listesi](#UML’de-ilişkilerin-listesi-şu-şekilde:)
 7. [İyi Bir Tasarım](#İyi-Bir-Tasarım)
