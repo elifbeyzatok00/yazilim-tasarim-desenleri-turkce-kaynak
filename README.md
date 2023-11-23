@@ -23,7 +23,7 @@
 10. [S.O.L.I.D.](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#solid)
     - [S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s--srp-single-responsibility-principletek-sorumluluk-prensibi)
     - [O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#o--ocp-open-closed-principlea%C3%A7%C4%B1k-kapal%C4%B1-prensibi)
-    - [L → LSP (Liskov's Substition Principle)(Liskov'un Yerine Geçme Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#l--lsp-liskovs-substition-principlelikovun-yerine-ge%C3%A7me-prensibi)
+    - [L → LSP (Liskov's Substition Principle)(Liskov'un Yerine Geçme Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#l--lsp-liskovs-substition-principleliskovun-yerine-ge%C3%A7me-prensibi)
     - [I → ISP (Interface Segregation Principle)(Arayüz Ayrımı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#i--isp-interface-segregation-principlearay%C3%BCz-ayr%C4%B1m%C4%B1-prensibi)
     - [D → DIP (Dependency Inversion Principle)(Bağımlılıkların Tersine Çevrilmesi Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#d--dip-dependency-inversion-principleba%C4%9F%C4%B1ml%C4%B1l%C4%B1klar%C4%B1n-tersine-%C3%A7evrilmesi-prensibi)
 11. [Constraints (Kısıtlamalar)](#Constraints (Kısıtlamalar))
