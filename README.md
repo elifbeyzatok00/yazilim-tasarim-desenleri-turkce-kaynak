@@ -19,6 +19,11 @@
    2. [Kırılganlık (Fragility)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#2-k%C4%B1r%C4%B1lganl%C4%B1k-fragility)
    3. [Immabilite](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#3-i%CC%87mmabilite)
 8. [Çevik(Agile) Yazılım Geliştirme Süreci](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#%C3%A7evikagile-yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme-s%C3%BCreci)
+9. [Değer Tipi, Referans Tipi, Steak, Heap Nedir/Nasıl Çalışır?](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#de%C4%9Fer-tipi-referans-tipi-steak-heap-nedirnas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r)
+10. [S.O.L.I.D.](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#solid)
+    - [S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s--srp-single-responsibility-principletek-sorumluluk-prensibi)
+    - [O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#o--ocp-open-closed-principlea%C3%A7%C4%B1k-kapal%C4%B1-prensibi)
+    - [L → LSP (Liskov's Substition Principle)(Likov'un Yerine Geçme Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#l--lsp-liskovs-substition-principlelikovun-yerine-ge%C3%A7me-prensibi)
 
 
 
@@ -935,6 +940,7 @@ Liskov prensibine göre ara sınıf koymamız gerekmektedir.
 ![Alt text](image-26.png)
 
 Örnek Kod Java
+
 ![Alt text](image-31.png)
 
 ```java
