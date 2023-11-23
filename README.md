@@ -12,7 +12,7 @@
         -[Polymorphism (Çok biçimlilik)](#Polymorphism (Çok biçimlilik))
         -[Abstraction (Soyutlama)](#Abstraction (Soyutlama))
 3. [Access modifiers](#Access-modifiers)
-4. [UML’de ilişkilerin listesi](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/blob/main/README.md#umlde-ili%C5%9Fkilerin-listesi-%C5%9Fu-%C5%9Fekilde)
+4. [UML’de İlişkilerin Listesi](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/blob/main/README.md#umlde-ili%C5%9Fkilerin-listesi-%C5%9Fu-%C5%9Fekilde)
 5. [İyi Bir Tasarım](#İyi-Bir-Tasarım)
    1. [Esnemezlik (Rijidite)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#1-esnemezlik-rijidite)
    2. [Kırılganlık (Fragility)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#2-k%C4%B1r%C4%B1lganl%C4%B1k-fragility)
@@ -663,7 +663,7 @@ belirtilmemişse default olarak “private” değerini alır.
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/d531d775-0d99-4427-ab02-c8bdb8205160)
 
 
-### UML’de ilişkilerin listesi şu şekilde:
+### UML’de İlişkilerin Listesi
 
 1- Generalization/Inheritance
 
