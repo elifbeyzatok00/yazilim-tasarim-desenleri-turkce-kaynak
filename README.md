@@ -18,7 +18,7 @@
    1. [Esnemezlik (Rijidite)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#1-esnemezlik-rijidite)
    2. [Kırılganlık (Fragility)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#2-k%C4%B1r%C4%B1lganl%C4%B1k-fragility)
    3. [Immabilite](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#3-i%CC%87mmabilite)
-8. [Çevik(Agile) Yazılım Geliştirme Süreci]([#Çevik(Agile)-Yazılım-Geliştirme-Süreci](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#%C3%A7evikagile-yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme-s%C3%BCreci))
+8. [Çevik(Agile) Yazılım Geliştirme Süreci](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#%C3%A7evikagile-yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme-s%C3%BCreci)
 
 
 
