@@ -1,18 +1,30 @@
 # yazilim-tasarim-desenleri-turkce-kaynak
 
 ## İçindekiler 📄
+✨[Laboratuvar Kodları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri)
+
 1. [OOP Nedir?](#OOP)
 2. [Nesne](#Nesne)
-3. [Sınıf](#Sınıf)
-4. [Nesne Yönelimli Programlama İlkeleri](#Nesne-Yönelimli-Programlama-İlkeleri)
-5. [S.O.L.I.D. Nedir?](#solid-nedir)
+   - [Nesne Yönelimli Programlama İlkeleri](#Nesne-Yönelimli-Programlama-İlkeleri)
+   - [Sınıf](#Sınıf)
+        -[Encapsulation (Kapsülleme)](#Encapsulation (Kapsülleme))
+        -[Inheritance (Kalıtım)](#Inheritance (Kalıtım))
+        -[Polymorphism (Çok biçimlilik)](#Polymorphism (Çok biçimlilik))
+        -[Abstraction (Soyutlama)](#Abstraction (Soyutlama))
+4. [Sınıf](#Sınıf)
+5. [Access modifiers](#Access-modifiers)
+6. [UML’de ilişkilerin listesi](#UML’de-ilişkilerin-listesi-şu-şekilde:)
+7. [İyi Bir Tasarım](#İyi-Bir-Tasarım)
+   1. [Esnemezlik (Rijidite)](#1.-Esnemezlik (Rijidite))
+   2. [Kırılganlık (Fragility)](#Kırılganlık (Fragility))
+8. [S.O.L.I.D. Nedir?](#solid-nedir)
    - [Single Responsibility (Tek Sorumluluk Prensibi)](#single-responsibility-principle-tek-sorumluluk-prensibi)
    - [Open/Closed Principle (Açık Kapalı Prensibi)](#openclosed-principle-açık-kapalı-prensibi)
    - [Liskov Substitution (Liskov’un Yerine geçme Prensibi)](#liskov-substitution-principle-liskovun-yerine-geçme-prensibi)
    - [Interface Segregation (Arayüz Ayrımı Prensibi)](#interface-segregation-principle-arayüz-ayrımı-prensibi)
    - [Dependency Inversion (Bağımlılıkların Tersine Çevrilmesi Prensibi)](#dependency-inversion-principle-bağımlılıkların-tersine-çevrilmesi-prensibi)
-6. [Tasarım Deseni Nedir?](#tasarım-deseni-nedir)
-7. [Tasarım Desenleri](#tasarım-desenleri)
+9. [Tasarım Deseni Nedir?](#tasarım-deseni-nedir)
+10. [Tasarım Desenleri](#tasarım-desenleri)
    - [Creational  (Oluşturucu)](#creational-oluşturucu)
      - [Singleton](#-singleton)
      - [Factory](#-factory)
@@ -39,8 +51,8 @@
      - [Strategy](#-strategy)
      - [Template Method](#-template-method)
      - [Visitor](#%EF%B8%8F-visitor)
-8. [Kapanış](#kapan%C4%B1%C5%9F)
-9. [Kaynakçalar](#kaynakçalar)
+11. [Kapanış](#kapan%C4%B1%C5%9F)
+12. [Kaynakçalar](#kaynakçalar)
 
 ## OOP
 
