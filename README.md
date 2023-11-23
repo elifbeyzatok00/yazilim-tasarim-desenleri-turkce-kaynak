@@ -653,14 +653,16 @@ belirlenir. Bu erişim belirteçleri sayesinde bir özellik veya
 metodun diğer classlardan erişilip erişilemeyeceğini belirtir.
 Aşağıda erişim belirteçleri sıralanmıştır;
 
-![Alt text](image-36.png)
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/bf66c27d-6aa3-4ce4-a739-8c39eda52cc5)
+
 
 ```
 Not: Eğer bir özellik veya metodun erişim belirteci
 belirtilmemişse default olarak “private” değerini alır.
 ```
 
-![Alt text](image-37.png)
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/d531d775-0d99-4427-ab02-c8bdb8205160)
+
 
 ### UML’de ilişkilerin listesi şu şekilde:
 
@@ -1088,7 +1090,8 @@ Sınıflar, kullanmadığı metotları içeren arayüzleri uygulamaya zorlanmama
 ![Alt text](image-28.png)
 
 Örnek Kod Java
-![Alt text](image-29.png)
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/e855f7ce-801a-46bc-bdd2-d50ee0b0b2f8)
+
 
 ```java
 interface IWorker {
@@ -1124,7 +1127,8 @@ Yukarıdaki diyagram incelendiğinde, şirket çalışanları IWorker arayüzün
 
 Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir. `work()`, `pay()`, `eat()` davranışları başka arayüzlere aktarıldı ve ihtiyaç halinde olanlar uygulandı.
 
-![Alt text](image-30.png)
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/6fc78e86-ca24-4410-9880-13461f7bbd8c)
+
 
 ```java
 interface IWorker {
@@ -1241,7 +1245,8 @@ class Program{
 ```
 
 Örnek Kod Java 2
-![Alt text](image-34.png)
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/700709b9-6c27-49a7-b2b1-573ca4b3d414)
+
 
 ```java
 class ExceptionReporter {
@@ -1266,7 +1271,8 @@ class OracleDatabase {
 Yukarıdaki diyagram ve kod incelendiğinde ExceptionReporter sınıfının (yüksek seviyeli sınıf), OracleDatabase sınıfına (düşük seviyeli sınıf) direkt olarak bağımlı olduğu görülmektedir. İleride veri tabanı olarak Oracle değil de MySQL kullanmak istersek maalesef bu sınıfa müdahale etmek zorunda kalacağız. Bu istenmeyen bir davranıştır. Bunun çözümünü ise buradaki bağımlılıkları soyutlayarak sağlayacağız.
 
 Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir.
-![Alt text](image-35.png)
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/957344e6-0e73-45d2-8b73-485c53eec316)
+
 
 ```java
 class ExceptionReporter {
@@ -1316,7 +1322,8 @@ Veri üzerindeki mantıksal sınırlamalara kısıt adı verilir. Nesnelerdeki a
 
 **Wrapper Type:** Java da bazen bu Primitive tipleri sarmalamak(Wrapping) zorunda kalırız. Örnek olarak eğer bir koleksiyon(collections) kullanacaksak tanımlaması yapılırken bir nesne ile tanımlanmalıdır. Yani int yerine onu başka bir class içerisinde sarmalayarak kullanmalıyız. Java bizim için bu primitive değerleri sarmalanmış hallerini de hazırlamış. Bunlara da Wrapper Type denilmektedir.
 
-![Alt text](image-38.png)
+![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/72a6a6de-1f51-4e7a-9bf9-a877936e5c1e)
+
 
 Örnek Kod Java
 
