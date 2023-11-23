@@ -15,8 +15,10 @@
 5. [Access modifiers](#Access-modifiers)
 6. [UML’de ilişkilerin listesi](#UML’de-ilişkilerin-listesi-şu-şekilde:)
 7. [İyi Bir Tasarım](#İyi-Bir-Tasarım)
-   1. [Esnemezlik (Rijidite)](#1.-Esnemezlik (Rijidite))
-   2. [Kırılganlık (Fragility)](#Kırılganlık (Fragility))
+   1. [Esnemezlik (Rijidite)](#1.-Esnemezlik-(Rijidite))
+   2. [Kırılganlık (Fragility)](#2.-Kırılganlık-(Fragility))
+   3. [Immabilite](#3.-Immabilite)
+8. [Çevik(Agile) Yazılım Geliştirme Süreci](#Çevik(Agile)-Yazılım-Geliştirme-Süreci)
 8. [S.O.L.I.D. Nedir?](#solid-nedir)
    - [Single Responsibility (Tek Sorumluluk Prensibi)](#single-responsibility-principle-tek-sorumluluk-prensibi)
    - [Open/Closed Principle (Açık Kapalı Prensibi)](#openclosed-principle-açık-kapalı-prensibi)
@@ -766,7 +768,7 @@ Aşağıda sınıflar arasında Composition ilişkisini görebilirsiniz. Kalp, i
 
 - Daha az kırılgan sistemler geliştirilmelidir.
 
-#### 3. İmmabilite
+#### 3. Immabilite
 
 - Yazılım sistemleri modüler şekilde tasarlanmalıdır.
 - Bir projenin modülünün başka bir projede de kullanılmasına **reusability** denir.
