@@ -5,8 +5,8 @@
 
 1. [OOP Nedir?](#OOP)
 2. [Nesne](#Nesne)
-   - [Nesne Yönelimli Programlama İlkeleri](#Nesne-Yönelimli-Programlama-İlkeleri)
    - [Sınıf](#Sınıf)
+   - [Nesne Yönelimli Programlama İlkeleri](#Nesne-Yönelimli-Programlama-İlkeleri)
         -[Encapsulation (Kapsülleme)](#Encapsulation (Kapsülleme))
         -[Inheritance (Kalıtım)](#Inheritance (Kalıtım))
         -[Polymorphism (Çok biçimlilik)](#Polymorphism (Çok biçimlilik))
@@ -54,11 +54,6 @@ Ortaya çıkış nedenlerinden bazıları da yazılımda; karmaşıklığı azal
 ![Alt text](image.png)
 
 Yukarıda Developer adında bir sınıf görülmektedir. Sınıf alanlar (fields) ve davranışlarımızın (methods) tanımlandığı yerdir. Nesne ise bu sınıftan bir örnek alınmış halidir.
-
-### Nesne Yönelimli Programlama İlkeleri
-
-Nesne yönelimli programlama 4 temel ilke üzerine kuruludur ve bir dilin, nesne yönelimli programlamayı uyguluyor denebilmesi için 4 koşulu da sağlıyor olması gerekiyor. Bunlar; Encapsulation, Abstraction, Inheritance, Polymorphism
-![Alt text](image-1.png)
 
 ## Sınıf
 
@@ -144,6 +139,11 @@ ogrenci.bilgileri_goster()
 ```
 
 Bu örneklerde, "Ogrenci" adında bir sınıf oluşturuldu. Bu sınıf içinde "Adi" ve "Yas" adında iki özellik (property) bulunuyor. C# ve Java örneklerinde bu özelliklere doğrudan erişim sağlanabiliyor. Python örneğinde ise "init" metodunu kullanarak sınıfın yapıcı metodunu tanımlayıp, özelliklere erişim sağlanıyor. Ayrıca, her üç dilde de "bilgileriGoster" veya "bilgileri_goster" adında bir metod ile sınıfın özelliklerini ekrana yazdırmak için bir fonksiyon oluşturuldu.
+
+### Nesne Yönelimli Programlama İlkeleri
+
+Nesne yönelimli programlama 4 temel ilke üzerine kuruludur ve bir dilin, nesne yönelimli programlamayı uyguluyor denebilmesi için 4 koşulu da sağlıyor olması gerekiyor. Bunlar; Encapsulation, Abstraction, Inheritance, Polymorphism
+![Alt text](image-1.png)
 
 ## Encapsulation (Kapsülleme)
 
