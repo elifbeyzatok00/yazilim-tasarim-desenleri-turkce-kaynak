@@ -1,7 +1,7 @@
 # yazilim-tasarim-desenleri-turkce-kaynak
 
 ## İçindekiler 📄
-✨[Laboratuvar Kodları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri)
+📌[Laboratuvar Kodları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri)
 
 1. [OOP Nedir?](#OOP)
 2. [Nesne](#Nesne)
