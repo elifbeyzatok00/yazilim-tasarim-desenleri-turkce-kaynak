@@ -24,7 +24,20 @@
     - [S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s--srp-single-responsibility-principletek-sorumluluk-prensibi)
     - [O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#o--ocp-open-closed-principlea%C3%A7%C4%B1k-kapal%C4%B1-prensibi)
     - [L → LSP (Liskov's Substition Principle)(Likov'un Yerine Geçme Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#l--lsp-liskovs-substition-principlelikovun-yerine-ge%C3%A7me-prensibi)
-
+    - [I → ISP (Interface Segregation Principle)(Arayüz Ayrımı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#i--isp-interface-segregation-principlearay%C3%BCz-ayr%C4%B1m%C4%B1-prensibi)
+    - [D → DIP (Dependency Inversion Principle)(Bağımlılıkların Tersine Çevrilmesi Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#d--dip-dependency-inversion-principleba%C4%9F%C4%B1ml%C4%B1l%C4%B1klar%C4%B1n-tersine-%C3%A7evrilmesi-prensibi)
+11. [Constraints (Kısıtlamalar)](#Constraints (Kısıtlamalar))
+12. [Boxing/Unboxing](#Boxing/Unboxing)
+13. [Property (Nitelik, Özellik) Nedir?](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#property-nitelik-%C3%B6zellik-nedir)
+14. [Constructor Nedir?](#Constructor-Nedir?)
+15. [Kalıtım ile Üretilen Sınıflın (A-B-C) Çalışması](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#kal%C4%B1t%C4%B1m-ile-%C3%BCretilen-s%C4%B1n%C4%B1fl%C4%B1n-a-b-c-%C3%A7al%C4%B1%C5%9Fmas%C4%B1)
+16. [Yazılım Tasarım Gereksinimleri Proje Geliştirme Modelleri Nedir, Nasıl Uygulanır?](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#yaz%C4%B1l%C4%B1m-tasar%C4%B1m-gereksinimleri-proje-geli%C5%9Ftirme-modelleri-nedir-nas%C4%B1l-uygulan%C4%B1r)
+17. [Artırımlı Model Nedir?](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#art%C4%B1r%C4%B1ml%C4%B1-model-nedir)
+18. [UML(Unified Modeling Language) nedir?](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#umlunified-modeling-language-nedir)
+    - [4+1 Bakış Açısı](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#41-bak%C4%B1%C5%9F-a%C3%A7%C4%B1s%C4%B1-farkl%C4%B1-a%C5%9Famalarda-farkl%C4%B1-uml-diyagramlar%C4%B1)
+    - [Use-Case Diyagramları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#use-case-diyagramlar%C4%B1)
+    - [Sınıf-Nesne Diyagramları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s%C4%B1n%C4%B1f-nesne-diyagramlar%C4%B1)
+19. [Kaynakça](#Kaynakça)
 
 
 ## OOP
@@ -626,7 +639,7 @@ ucgen.ciz()
 
 Bu örneklerde, Sekil soyut sınıf (abstract class) olarak tanımlanmıştır. Soyut sınıflar soyut metotlar (abstract methods) içerebilir. Soyut metotlar sadece imza (signature) olarak tanımlanır, yani metotun gövdesi soyut sınıf içinde yer almaz. Soyut metotları olan bir sınıf, bu metotları miras alan alt sınıflar tarafından zorunlu olarak implemente edilmelidir. Bu, soyutlamayı (abstraction) sağlayan bir özelliktir.
 
-## Access modifiers
+## Access modifiers  (Erişim Belirteçleri)
 
 Public → +
 Private → -
@@ -634,6 +647,20 @@ Protected → #
 package/default -> ~
 
 Sınıf gösterimini gördük. Ancak sınıfın tek başına gösterimi bir şey ifade etmiyor. Bu sınıflar arasındaki bağlantıların gösterimi de önemli.
+
+Erişim belirteçleri class içerisindeki özellik ve metotlar için
+belirlenir. Bu erişim belirteçleri sayesinde bir özellik veya
+metodun diğer classlardan erişilip erişilemeyeceğini belirtir.
+Aşağıda erişim belirteçleri sıralanmıştır;
+
+![Alt text](image-36.png)
+
+```
+Not: Eğer bir özellik veya metodun erişim belirteci
+belirtilmemişse default olarak “private” değerini alır.
+```
+
+![Alt text](image-37.png)
 
 ### UML’de ilişkilerin listesi şu şekilde:
 
@@ -1268,22 +1295,6 @@ class OracleDatabase implements IDatabase {
     }
 }
 ```
-
-### Access Modifiers (Erişim Belirteçleri)
-
-Erişim belirteçleri class içerisindeki özellik ve metotlar için
-belirlenir. Bu erişim belirteçleri sayesinde bir özellik veya
-metodun diğer classlardan erişilip erişilemeyeceğini belirtir.
-Aşağıda erişim belirteçleri sıralanmıştır;
-
-![Alt text](image-36.png)
-
-```
-Not: Eğer bir özellik veya metodun erişim belirteci
-belirtilmemişse default olarak “private” değerini alır.
-```
-
-![Alt text](image-37.png)
 
 ## Constraints (Kısıtlamalar)
 
