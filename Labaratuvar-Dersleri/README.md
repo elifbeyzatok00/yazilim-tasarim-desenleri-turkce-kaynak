@@ -107,7 +107,7 @@ Fonksiyon düzeyinde, sınıf düzeyinde çok biçimlilik vardır.
 
 **Referans** neyi çağırıp çağıramayacağımı belirler
 
-**Dump casting**- nesnenin referansını değiştirme işlemi.
+**Down casting**- nesnenin referansını değiştirme işlemi.
 Bu sayede alt sınıflar üst sınıflar gibi davranabilir
 
 **get-set metodları **– okuma yazma işlemlerini yaptırır
