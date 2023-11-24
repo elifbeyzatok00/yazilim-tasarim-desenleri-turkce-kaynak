@@ -421,7 +421,7 @@ if hata_durumu:
 
 ### `Bağımlılıkları tersine çevirme nedir?`
 
-> D — DIP (Dependency Inversion Principle)Bağımlılığı tersine çevirme ilkesi somut sınıflar yerine soyut sınıfların kullanılmasını önermektedir. Çünkü yüksek seviyeli sınıflar düşük seviyeli sınıflara bağımlı olurlarsa yapılacak geliştirmeler ana sınıfı etkileyeceği için birden fazla sınıfta değişiklik gerektirebilir.
+> **D — DIP (Dependency Inversion Principle)Bağımlılığı tersine çevirme ilkesi** somut sınıflar yerine soyut sınıfların kullanılmasını önermektedir. Çünkü yüksek seviyeli sınıflar düşük seviyeli sınıflara bağımlı olurlarsa yapılacak geliştirmeler ana sınıfı etkileyeceği için birden fazla sınıfta değişiklik gerektirebilir.
 
 ### `Yüksek seviyeli sınıf nedir?`
 
