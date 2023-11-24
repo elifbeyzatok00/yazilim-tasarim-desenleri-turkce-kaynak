@@ -418,3 +418,21 @@ if hata_durumu:
 
 
 ```
+
+### `Bağımlılıkları tersine çevirme nedir?`
+
+> D — DIP (Dependency Inversion Principle)Bağımlılığı tersine çevirme ilkesi somut sınıflar yerine soyut sınıfların kullanılmasını önermektedir. Çünkü yüksek seviyeli sınıflar düşük seviyeli sınıflara bağımlı olurlarsa yapılacak geliştirmeler ana sınıfı etkileyeceği için birden fazla sınıfta değişiklik gerektirebilir.
+
+### `Yüksek seviyeli sınıf nedir?`
+
+> Yüksek seviye sınıflarda bir davranış değiştiğinde, alt seviye davranışların bu değişime uyum sağlaması gerekir. Ancak, düşük seviye sınıflarda bir davranış değiştiğinde, üst seviye sınıfların davranışında bir bozulma meydana gelmemelidir.
+
+> **Düşük seviyeli sınıflar** projelerde temel işleri gerçekleştirir
+> Örn: veri tabanına yazdır, veri alışverişi
+
+> **Üst seviyeli sınıflar** temel işleri yapan düşük seviyeli sınıfları kullanır.
+
+> [!IMPORTANT]
+> Yüksek seviyeli sınıf, düşük seviyeli sınıfları kullanmayacak.
+> Düşük seviyeli sınfa erişimini sağlayan sınıflar tasarlıycaz. Aracı olarak.
+> Yüksek seviyeli sııfın düşük seviyeli sınıfa olan bağımlılığını tersine çevirme yapmış olacağız
