@@ -11,7 +11,7 @@
         -[Inheritance (Kalıtım)](#Inheritance (Kalıtım))
         -[Polymorphism (Çok biçimlilik)](#Polymorphism (Çok biçimlilik))
         -[Abstraction (Soyutlama)](#Abstraction (Soyutlama))
-3. [Access modifiers](#Access-modifiers)
+3. [Access modifiers(Erişim Belirteçleri)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/blob/main/README.md#access-modifiers--eri%C5%9Fim-belirte%C3%A7leri)
 4. [UML’de İlişkilerin Listesi](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/blob/main/README.md#umlde-i%CC%87li%C5%9Fkilerin-listesi)
 5. [İyi Bir Tasarım](#İyi-Bir-Tasarım)
    1. [Esnemezlik (Rijidite)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#1-esnemezlik-rijidite)
