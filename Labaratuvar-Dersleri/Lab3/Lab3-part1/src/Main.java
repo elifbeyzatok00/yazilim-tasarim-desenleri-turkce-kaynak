@@ -17,13 +17,13 @@ public class Main {
         m1.giris(); //çalışır
         m2.giris(); //çalışır
 
-        m1.UrunGoruntule(); //m1 Kullanici referansı ile oluşturulduğu için Kullanici sınıfında olmayan UrunGoruntule() methodunu kullanamaz, çalışmaz
+        m1.UrunGoruntule(); //m1, Kullanici referansı ile oluşturulduğu için Kullanici sınıfında olmayan UrunGoruntule() methodunu kullanamaz, çalışmaz
         m2.UrunGoruntule(); //çalışır
 
         
-        ((Musteri)m1).UrunGoruntule(); // Dump casting ile referansını değiştirdik
+        ((Musteri)m1).UrunGoruntule(); // Down casting ile referansını değiştirdik
 
-        ((Satici)m1).UrunGoruntule(); // Dump casting ile referansını değiştirdik
+        ((Satici)m1).UrunGoruntule(); // Down casting ile referansını değiştirdik
         // classCastException alınır. Burada referansı Satici olarak değiştiremeyiz. Çünkü nesnesi Musteri olarak tanımlandı.Burada nesnesi Musteri olduğu için referansı Satici olarak değiştirmeye izin vermez.  
     }
 }
