@@ -19,4 +19,4 @@ public class Main {
     }
 }
 
-//ödev : birkaç şekil ekleyerek gönderelim
+//ödev1 : birkaç şekil ekleyerek gönderelim

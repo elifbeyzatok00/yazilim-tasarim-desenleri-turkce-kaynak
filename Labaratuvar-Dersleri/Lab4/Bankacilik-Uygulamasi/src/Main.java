@@ -4,4 +4,4 @@ public class Main {
     }
 }
 
-//ödev : Kullanici classında tek sınıf altında yazılan Kullanıcı, Ozel, Standart classlarını 3 farklı sınıfa çevirelim
+//ödev0 : Kullanici classında tek sınıf altında yazılan Kullanıcı, Ozel, Standart classlarını 3 farklı sınıfa çevirelim
