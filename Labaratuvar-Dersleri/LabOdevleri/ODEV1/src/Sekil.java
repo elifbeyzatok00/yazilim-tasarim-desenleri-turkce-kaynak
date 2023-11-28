@@ -159,8 +159,9 @@ class CevrePano implements Pano {
     public double hesapla(ArrayList<Sekil> sekils) {
         double toplam = 0;
         for (Sekil sekil : sekils) {
-            if (sekil instanceof Cevre)
+            if (sekil instanceof Cevre){
                 toplam += ((Cevre) sekil).cevreHesapla();
+            }
         }
         return toplam;
     }
