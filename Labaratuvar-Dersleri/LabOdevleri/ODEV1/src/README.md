@@ -9,8 +9,6 @@
 
 ## Diyagram Çizelim
 
-Öncelikle, verdiğiniz Java kodu üzerinden use case ve class diyagramlarını oluşturamam. Ancak, sizin için teorik olarak nasıl tasarlanabileceğini anlatabilirim.
-
 ### Use Case Diyagramı:
 
 Use case diyagramında genellikle sistemin kullanıcıları ve bu kullanıcıların gerçekleştirebilecekleri temel işlevsellikler gösterilir. Ancak bu örnekte, bir GUI uygulaması veya farklı kullanıcı rolleri olmadığı için basit bir use case diyagramı oluşturmak mümkün değil.

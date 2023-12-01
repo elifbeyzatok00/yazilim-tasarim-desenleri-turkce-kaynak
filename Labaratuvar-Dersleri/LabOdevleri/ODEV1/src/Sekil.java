@@ -139,6 +139,26 @@ class Ucgen implements Alan, Cevre {
     }
 }
 
+class EskenarUcgen implements Alan, Cevre {
+    private int kenar;
+
+    public double alanHesapla() {
+        return Math.sqrt(3) / 4 * kenar * kenar;
+    }
+
+    public double cevreHesapla() {
+        return 3 * kenar;
+    }
+
+    public int getKenar() {
+        return kenar;
+    }
+
+    public void setKenar(int kenar) {
+        this.kenar = kenar;
+    }
+}
+
 interface Pano {
     double hesapla(ArrayList<Sekil> sekils);
 }
