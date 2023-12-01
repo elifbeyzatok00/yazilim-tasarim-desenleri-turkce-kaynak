@@ -70,3 +70,52 @@ public class Test {
     }
 }
 ```
+
+## Diyagram Çizelim
+
+Metin tabanlı bir platformda şablonlarla çalıştığımız için görsel diyagram çizemem, ancak basit bir açıklama ile size yardımcı olabilirim.
+
+**Class Diagram (Sınıf Diyagramı):**
+
+```
++---------------------+      +---------------------+      +---------------------+
+|      Kullanici      |      |       Musteri       |      |        Main         |
+|---------------------|      |---------------------|      |---------------------|
+| + selam()           |      | + merhaba()         |      | + main(String[])    |
++---------------------+      +---------------------+      +---------------------+
+        ^                         ^
+        |                         |
++---------------------+      +---------------------+
+|        Main         |      |       Kullanici      |
+|---------------------|      |---------------------|
+| + main(String[])    |      | + selam()           |
++---------------------+      +---------------------+
+```
+
+**Use Case Diagram (Kullanım Durumu Diyagramı):**
+
+```
++---------------------+
+|      Kullanıcı      |
+|---------------------|
+| + selam()           |
++---------------------+
+          |
+          |
++---------------------+
+|       Musteri       |
+|---------------------|
+| + merhaba()         |
++---------------------+
+          |
+          |
++---------------------+
+|        Main         |
+|---------------------|
+| + main(String[])    |
++---------------------+
+```
+
+Bu şablonlar, `Kullanici` sınıfının `selam()` metodunu ve `Musteri` sınıfının buna ek olarak `merhaba()` metodunu içerdiğini gösterir. `Main` sınıfı ise `main()` metodunu içerir. Kullanım durumu diyagramında, "Kullanıcı" sınıfının `selam()` metodunu, "Musteri" sınıfının ise bu metodun yanı sıra `merhaba()` metodunu kullandığını görüyoruz.
+
+Kodlarınızın bu şablona uygun olduğunu görebilirsiniz.

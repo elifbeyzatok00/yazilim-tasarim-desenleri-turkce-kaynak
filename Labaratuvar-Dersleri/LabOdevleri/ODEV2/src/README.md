@@ -165,3 +165,65 @@ public class Program {
 }
 
 ```
+
+## Diyagram Çizelim
+
+Tabii ki, aşağıda verdiğim use case ve class diyagramları, verdiğiniz Java kodunu temel alarak oluşturulmuştur. Ancak, bu diyagramlar genellikle daha karmaşık sistemlerde kullanılır, bu nedenle bu basit örnekte kullanmaya gerek olmayabilir.
+
+Use Case Diyagramı:
+
+Use case diyagramında, sistem içindeki kullanım durumlarını gösteren oval şekiller ve bu durumları birbirine bağlayan oklar bulunur.
+
+```
+ +---------------------+
+ | Yazıcı İşlemleri    |
+ +---------------------+
+          |
+   +------+-------+
+   |              |
+   V              V
+ +----+       +-------+
+ |    |       |       |
+ |Yazdır|       | Tara  |
+ |    |       |       |
+ +----+       +-------+
+```
+
+Class Diyagramı:
+
+Class diyagramında sınıfları, sınıflar arasındaki ilişkileri ve sınıfların özelliklerini gösteren kutular bulunur.
+
+```
++-------------------+           +-------------------+
+|   YaziciProcess   |           |    Fonksiyonel    |
+|-------------------|           |      Yazici       |
+| - fy: FonksiyonelYazici |<>------|-------------------|
+| - ft: FonksiyonelTara |<>------| + yazdir(): void  |
+|-------------------|           |-------------------|
+| + YaziciProcess(yazici:  |     |      FonksiyonelTara  |
+|   FonksiyonelYazici,      |<>------|-----------------------|
+|   tara: FonksiyonelTara)  |     | + tara(): void         |
+| + yazdir(): void          |     +-----------------------|
+| + tara(): void            |
++-------------------+
+|                       |
+|        |              |
+|        V              |
+|    +-------+          |
+|    | Yazici1|          |
+|    |-------|          |
+|    | + yazdir(): void |
+|    | + tara(): void   |
+|    +-------+          |
+|                       |
+|        |              |
+|        V              |
+|    +-------+          |
+|    | Yazici2|          |
+|    |-------|          |
+|    | + yazdir(): void |
+|    +-------+          |
++-----------------------+
+```
+
+Bu diyagramlarda, `YaziciProcess` sınıfı, hem `FonksiyonelYazici` hem de `FonksiyonelTara` arayüzlerini içerir. `Yazici1` ve `Yazici2` sınıfları bu arayüzleri implemente eder. Bağlantılar ise sınıflar arasındaki ilişkileri gösterir. `<>` işareti, bir interface'in implemente edildiğini gösterir.

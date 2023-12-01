@@ -35,3 +35,55 @@ ilk olarak kare, üçgen ve dikdörtgen için Kare, Ucgen ve Dikdortgen sınıfl
 AlanHesapla metodu içinde tanımlanan Yazdir() metodunu kullanıp parametre olarak yukarıda tanımladığımız kare, üçgen ve dikdörtgen nesnelerini verdik.
 
 > Böylelikle pratik bir şekilde her şekil için alan hesaplattık. Ve yeni şekiller eklendiğinde de gelişmeye açık, esnek bir kod elde ettik.
+
+## Diyagram yapalım
+
+Metin tabanlı bir platformda görsel diyagramları çıkarmak zor olduğu için şablonları anlatımlarla sunabilirim.
+
+**Class Diagram (Sınıf Diyagramı):**
+
+```
++---------------------+      +-----------------------+        +------------------------+
+|        Sekil        |      |    AlanHesapla        |        |         Main           |
+|---------------------|      |-----------------------|        |------------------------|
+| + AlanHesapla()     |      | + Yazdir(Sekil)       |        | + main(String[])        |
++---------------------+      +-----------------------+        +------------------------+
+        ^                                ^
+        |                                |
+        |                                |
++-------+---------+          +-----------+------------+          +---------------------+
+|       Kare       |          |         Ucgen          |          |     Dikdortgen      |
+|------------------|          |-----------------------|          |---------------------|
+| - kenar: int      |          | - kenar: int           |          | - uzunKenar: int     |
+|------------------|          | - yukseklik: int       |          | - kisaKenar: int     |
+| + AlanHesapla()   |          | + AlanHesapla()        |          | + AlanHesapla()      |
++------------------+          +-----------------------+          +---------------------+
+```
+
+**Use Case Diagram (Kullanım Durumu Diyagramı):**
+
+```
++---------------------+
+|       Kullanıcı     |
+|---------------------|
+| + AlanHesapla()     |
++---------------------+
+         |
+         |
++---------------------+
+|      AlanHesapla     |
+|---------------------|
+| + Yazdir(Sekil)     |
++---------------------+
+         |
+         |
++---------------------+
+|        Main         |
+|---------------------|
+| + main(String[])    |
++---------------------+
+```
+
+Bu şablonlar, `Sekil` arayüzünü ve onu uygulayan `Kare`, `Ucgen`, `Dikdortgen` sınıflarını gösterir. `AlanHesapla` sınıfı ise `Sekil` nesnelerini alarak `Yazdir` metodunu içerir. `Main` sınıfı ise örnek nesneler oluşturarak `AlanHesapla` sınıfını kullanır.
+
+Bu şablonları kullanarak kodunuzu daha iyi anlayabilir ve geliştirebilirsiniz.

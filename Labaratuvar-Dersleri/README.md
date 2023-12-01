@@ -1,5 +1,7 @@
 # Laboratuvar Derslerinde Aldığım Notlar
 
+> Her uygulamanın use-case ve class diyagramları uygulamaların içindeki **README.md** dosyaları içindedir.
+
 **Sınıf:** şablonlardır
 **Nesne:** sınıflardan oluşur
 
