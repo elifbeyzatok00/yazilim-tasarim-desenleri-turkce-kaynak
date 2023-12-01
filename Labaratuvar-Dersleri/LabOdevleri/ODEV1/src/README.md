@@ -15,51 +15,104 @@ Use case diyagramında genellikle sistemin kullanıcıları ve bu kullanıcılar
 
 ### Class Diyagramı:
 
-Class diyagramında, sınıfları, sınıflar arasındaki ilişkileri ve bu sınıfların özelliklerini gösteren kutular bulunur.
-
+```plaintext
++---------------------------+
+|        Shape              |
++---------------------------+
+|                           |
++---------------------------+
+        ^
+        |
++---------------------------+
+|          Alan             |
++---------------------------+
+| + alanHesapla(): double   |
++---------------------------+
+        ^
+        |
++---------------------------+
+|          Cevre            |
++---------------------------+
+| + cevreHesapla(): double  |
++---------------------------+
+        ^
+        |
++---------------------------+
+|           Square          |
++---------------------------+
+| - kenar: int              |
+| + alanHesapla(): double   |
+| + cevreHesapla(): double  |
+| + getKenar(): int         |
+| + setKenar(kenar: int): void |
++---------------------------+
+        ^
+        |
++---------------------------+
+|       Rectangle           |
++---------------------------+
+| - uzunKenar: int          |
+| - kisaKenar: int          |
+| + alanHesapla(): double   |
+| + cevreHesapla(): double  |
+| + getUzunKenar(): int     |
+| + setUzunKenar(uzunKenar: int): void |
+| + getKisaKenar(): int     |
+| + setKisaKenar(kisaKenar: int): void |
++---------------------------+
+        ^
+        |
++---------------------------+
+|           Circle          |
++---------------------------+
+| - yaricap: double         |
+| + alanHesapla(): double   |
+| + cevreHesapla(): double  |
+| + getYaricap(): double    |
+| + setYaricap(yaricap: double): void |
++---------------------------+
+        ^
+        |
++---------------------------+
+|    EquilateralTriangle    |
++---------------------------+
+| - kenar: int              |
+| + alanHesapla(): double   |
+| + cevreHesapla(): double  |
+| + getKenar(): int         |
+| + setKenar(kenar: int): void |
++---------------------------+
+        ^
+        |
++---------------------------+
+|      CalculationPanel     |
++---------------------------+
+| + calculate(shapes: ArrayList<Shape>): double |
++---------------------------+
+        ^
+        |
++---------------------------+
+|        AreaPanel           |
++---------------------------+
+| + calculate(shapes: ArrayList<Shape>): double |
++---------------------------+
+        ^
+        |
++---------------------------+
+|      PerimeterPanel       |
++---------------------------+
+| + calculate(shapes: ArrayList<Shape>): double |
++---------------------------+
 ```
-+----------------+          +------------------+
-|      Main      |          |      Sekil       |
-|----------------|          |------------------|
-|                |          |                  |
-| + main(): void |          |                  |
-+----------------+          +------------------+
-         |                            |     \
-         |                            |      \
-         |                            |       \
-         V                            V        \
-+------------------+        +------------------+\
-|       Alan       |        |      Cevre       | \
-|------------------|        |------------------|  \
-| + alanHesapla(): |        | + cevreHesapla():|   \
-|   double         |        |   double         |    \
-+------------------+        +------------------+     \
-         |                            |                \
-         |                            |                 \
-         V                            V                  \
-+------------------+        +------------------+        \
-|       Kare       |        |     Dikdortgen   |         \
-|------------------|        |------------------|          \
-| - kenar: int      |        | - uzunKenar: int  |           \
-| + alanHesapla(): |        | + alanHesapla(): |            \
-|   double         |        |   double         |             \
-| + cevreHesapla():|        | + cevreHesapla():|              \
-|   double         |        |   double         |               \
-+------------------+        +------------------+                \
-         |                            |                             \
-         |                            |                              \
-         V                            V                               \
-+------------------+        +------------------+                     \
-|     Cember       |        |      Daire       |                       \
-|------------------|        |------------------|                        \
-| - yaricap: double |        | - yaricap: double |                         \
-| + alanHesapla(): |        | + alanHesapla(): |                          \
-|   double         |        |   double         |                           \
-| + cevreHesapla():|        | + cevreHesapla():|                            \
-|   double         |        |   double         |                             \
-+------------------+        +------------------+                              \
-```
 
-Bu diyagramda, temel sınıflar `Sekil`, `Kare`, `Dikdortgen`, `Cember`, ve `Daire` sınıflarını içerir. Alan ve Cevre interfaceleri, bu sınıfların alan ve çevre hesaplamalarını yapmasını sağlar. `AlanPano` ve `CevrePano` sınıfları, bu hesaplamaları liste üzerinde uygular. `Main` sınıfı ise örnek nesneler oluşturup işlemleri gerçekleştirir.
+In this class diagram:
 
-Bu sınıflar arasındaki ilişkiler, implementasyonları ve özellikleri gösterilmiştir.
+- `Shape` is the base interface.
+- `Alan` and `Cevre` are interfaces representing shapes that can calculate area and perimeter, respectively.
+- `Square`, `Rectangle`, `Circle`, and `EquilateralTriangle` are classes implementing both `Alan` and `Cevre` interfaces.
+- `CalculationPanel` is an interface representing a generic calculation panel.
+- `AreaPanel` and `PerimeterPanel` are specific panels that implement the `CalculationPanel` interface, each focusing on calculating area or perimeter.
+- Relationships between interfaces and classes are shown using generalization (inheritance).
+- The `calculate` method in each panel takes an `ArrayList` of shapes and performs the relevant calculations.
+
+Note: The `AreaPanel` and `PerimeterPanel` classes are not explicitly shown in your provided code, so I assumed their existence based on the context. If they don't exist, you can modify the diagram accordingly.

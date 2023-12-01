@@ -60,6 +60,7 @@ class Dikdortgen implements Alan, Cevre {
     }
 }
 
+/*  
 class Cember implements Alan, Cevre {
     private double yaricap;
 
@@ -79,6 +80,7 @@ class Cember implements Alan, Cevre {
         this.yaricap = yaricap;
     }
 }
+*/
 
 class Daire implements Alan, Cevre {
     private double yaricap;
@@ -100,6 +102,7 @@ class Daire implements Alan, Cevre {
     }
 }
 
+/* 
 class Ucgen implements Alan, Cevre {
     private int kenar1;
     private int kenar2;
@@ -138,6 +141,7 @@ class Ucgen implements Alan, Cevre {
         this.kenar3 = kenar3;
     }
 }
+*/
 
 class EskenarUcgen implements Alan, Cevre {
     private int kenar;
