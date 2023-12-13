@@ -438,3 +438,33 @@ if hata_durumu:
 > Yüksek seviyeli sınıf, düşük seviyeli sınıfları kullanmayacak.
 > Düşük seviyeli sınfa erişimini sağlayan sınıflar tasarlıycaz. Aracı olarak.
 > Yüksek seviyeli sııfın düşük seviyeli sınıfa olan bağımlılığını tersine çevirme yapmış olacağız
+
+## Tasarım Desenleri
+
+#### `Singleton Tasarım Deseni`
+
+Class tan bir nesne oluşturmammızı sağlayan tasarım deseni
+
+#### `Factory ve Abstract`
+
+istemcideki yükü azaltmak için kullanılır
+
+##### `Factory`
+
+- Somut fabrika
+
+- Nesnenin başka özelliklere çok bağımlılığı yok
+
+! üretmek istediğimiz nesnenin diğer sınıflara bağımlılığı yok
+
+##### `Abstract`
+
+- Karmaşıklığı azaltır
+- Bağımlılıkları azaltır
+- Nesnelerin oluşturma sürecinden soyutlanması
+
+- Nesnenin başka özelliklere çok bağımlılığı var. Bu nedenle çok karmaşık, bağımlılığı yüksek
+- ! üretmek istediğimiz nesnenin diğer sınıflara bağımlılığı var,yüksek (bu durumda factory kullansak bu sefer tüm yük factory üzerine bincek bu istedğimiz bir durum değil. Bu nedenle abstract factory kullanılıyor)
+
+> Somut özellik varsa abstract
+> Soyut ve özellik yoksa interface olarak tanımlarız sınıfları
