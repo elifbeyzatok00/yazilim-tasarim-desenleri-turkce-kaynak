@@ -37,43 +37,6 @@ class User {
     
 }
 
-/*  //40-75.satırlar eklenip 77-104 silinmesi gerekebilir. Burayı tekrar gözden geçir!
- interface DB {
-    public User selectUserById(int id);
-
-    public void insertUser(User user);
-}
-
-class Oracle implements DB{
-    private final List<User> userList;
-    private int idCounter; //db primary key tasarlamak için
-
-    public Oracle() {
-        idCounter = 0;
-        userList = new ArrayList<>();
-    }
-    @Override
-    public User selectUserById(int id) {
-        for (User user : userList) {
-            if (user.getId() == id) {
-                return user;
-            }
-        }
-        return null;
-    }
-    @Override
-    public void insertUser(User user) {
-        count();
-        user.setId(idCounter);
-        userList.add(user);
-    }
-
-    private void count() {
-        idCounter = idCounter + 1;
-    }
-}
- */
-
 class Oracle {
     private final List<User> userList;
     private int idCounter; //db primary key tasarlamak için
@@ -82,7 +45,7 @@ class Oracle {
         idCounter = 0;
         userList = new ArrayList<>();
     }
-    @Override
+    
     public User selectUserById(int id) {
         for (User user : userList) {
             if (user.getId() == id) {
@@ -91,7 +54,7 @@ class Oracle {
         }
         return null;
     }
-    @Override
+    
     public void insertUser(User user) {
         count();
         user.setId(idCounter);
