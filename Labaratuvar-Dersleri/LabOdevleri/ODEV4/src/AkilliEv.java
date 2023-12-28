@@ -80,9 +80,7 @@ class Isik {
 }
 
 class Klima {
-    private int sicaklik;
     public void guncelle(int sicaklik) {
-        this.sicaklik = sicaklik;
         System.out.println("Sıcaklık " + sicaklik + " dereceye ayarlandı");
     }
     public void ac() {
