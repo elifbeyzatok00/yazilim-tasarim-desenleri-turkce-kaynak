@@ -4,7 +4,7 @@
 
 ### `UML Diagram`
 
-![Alt text](<WhatsApp Image 2023-12-27 at 15.07.07_55ddaca5.jpg>)
+![Alt text](<WhatsApp Image 2024-01-03 at 16.50.09_74fe87ed.jpg>)
 
 > 4 liste var hepsinde de birer liste + ekle + çıkar fonksiyonları var
 > 4 liste : Calısan, Tasarımcı, Geliştirici, Yönetici
