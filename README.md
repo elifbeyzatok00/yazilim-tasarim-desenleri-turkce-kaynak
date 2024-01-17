@@ -2,15 +2,14 @@
 
 📌[Laboratuvar Kodları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri)
 
+📒[Ders Slaytları]()
+
 ## İçindekiler 📄
+
 1. [OOP Nedir?](#OOP)
 2. [Nesne](#Nesne)
    - [Sınıf](#Sınıf)
-   - [Nesne Yönelimli Programlama İlkeleri](#Nesne-Yönelimli-Programlama-İlkeleri)
-        -[Encapsulation (Kapsülleme)](#Encapsulation (Kapsülleme))
-        -[Inheritance (Kalıtım)](#Inheritance (Kalıtım))
-        -[Polymorphism (Çok biçimlilik)](#Polymorphism (Çok biçimlilik))
-        -[Abstraction (Soyutlama)](#Abstraction (Soyutlama))
+   - [Nesne Yönelimli Programlama İlkeleri](#Nesne-Yönelimli-Programlama-İlkeleri) -[Encapsulation (Kapsülleme)](#Encapsulation "Kapsülleme") -[Inheritance (Kalıtım)](#Inheritance "Kalıtım") -[Polymorphism (Çok biçimlilik)](#Polymorphism "Çok biçimlilik") -[Abstraction (Soyutlama)](#Abstraction "Soyutlama")
 3. [Access modifiers(Erişim Belirteçleri)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/blob/main/README.md#access-modifiers--eri%C5%9Fim-belirte%C3%A7leri)
 4. [UML’de İlişkilerin Listesi](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/blob/main/README.md#umlde-i%CC%87li%C5%9Fkilerin-listesi)
 5. [İyi Bir Tasarım](#İyi-Bir-Tasarım)
@@ -20,12 +19,12 @@
 6. [Çevik(Agile) Yazılım Geliştirme Süreci](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#%C3%A7evikagile-yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme-s%C3%BCreci)
 7. [Değer Tipi, Referans Tipi, Steak, Heap Nedir/Nasıl Çalışır?](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#de%C4%9Fer-tipi-referans-tipi-steak-heap-nedirnas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r)
 8. [S.O.L.I.D.](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#solid)
-    - [S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s--srp-single-responsibility-principletek-sorumluluk-prensibi)
-    - [O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#o--ocp-open-closed-principlea%C3%A7%C4%B1k-kapal%C4%B1-prensibi)
-    - [L → LSP (Liskov's Substition Principle)(Liskov'un Yerine Geçme Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#l--lsp-liskovs-substition-principleliskovun-yerine-ge%C3%A7me-prensibi)
-    - [I → ISP (Interface Segregation Principle)(Arayüz Ayrımı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#i--isp-interface-segregation-principlearay%C3%BCz-ayr%C4%B1m%C4%B1-prensibi)
-    - [D → DIP (Dependency Inversion Principle)(Bağımlılıkların Tersine Çevrilmesi Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#d--dip-dependency-inversion-principleba%C4%9F%C4%B1ml%C4%B1l%C4%B1klar%C4%B1n-tersine-%C3%A7evrilmesi-prensibi)
-9. [Constraints (Kısıtlamalar)](#Constraints (Kısıtlamalar))
+   - [S → SRP (Single Responsibility Principle)(Tek Sorumluluk Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s--srp-single-responsibility-principletek-sorumluluk-prensibi)
+   - [O → OCP (Open Closed Principle)(Açık Kapalı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#o--ocp-open-closed-principlea%C3%A7%C4%B1k-kapal%C4%B1-prensibi)
+   - [L → LSP (Liskov's Substition Principle)(Liskov'un Yerine Geçme Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#l--lsp-liskovs-substition-principleliskovun-yerine-ge%C3%A7me-prensibi)
+   - [I → ISP (Interface Segregation Principle)(Arayüz Ayrımı Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#i--isp-interface-segregation-principlearay%C3%BCz-ayr%C4%B1m%C4%B1-prensibi)
+   - [D → DIP (Dependency Inversion Principle)(Bağımlılıkların Tersine Çevrilmesi Prensibi)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#d--dip-dependency-inversion-principleba%C4%9F%C4%B1ml%C4%B1l%C4%B1klar%C4%B1n-tersine-%C3%A7evrilmesi-prensibi)
+9. [Constraints (Kısıtlamalar)](#Constraints "Kısıtlamalar")
 10. [Boxing/Unboxing](#Boxing/Unboxing)
 11. [Property (Nitelik, Özellik) Nedir?](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#property-nitelik-%C3%B6zellik-nedir)
 12. [Constructor Nedir?](#Constructor-Nedir?)
@@ -37,7 +36,6 @@
     - [Use-Case Diyagramları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#use-case-diyagramlar%C4%B1)
     - [Sınıf-Nesne Diyagramları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s%C4%B1n%C4%B1f-nesne-diyagramlar%C4%B1)
 17. [Kaynakça](#Kaynakça)
-
 
 ## OOP
 
@@ -638,7 +636,7 @@ ucgen.ciz()
 
 Bu örneklerde, Sekil soyut sınıf (abstract class) olarak tanımlanmıştır. Soyut sınıflar soyut metotlar (abstract methods) içerebilir. Soyut metotlar sadece imza (signature) olarak tanımlanır, yani metotun gövdesi soyut sınıf içinde yer almaz. Soyut metotları olan bir sınıf, bu metotları miras alan alt sınıflar tarafından zorunlu olarak implemente edilmelidir. Bu, soyutlamayı (abstraction) sağlayan bir özelliktir.
 
-## Access modifiers  (Erişim Belirteçleri)
+## Access modifiers (Erişim Belirteçleri)
 
 Public → +
 Private → -
@@ -654,14 +652,12 @@ Aşağıda erişim belirteçleri sıralanmıştır;
 
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/bf66c27d-6aa3-4ce4-a739-8c39eda52cc5)
 
-
 ```
 Not: Eğer bir özellik veya metodun erişim belirteci
 belirtilmemişse default olarak “private” değerini alır.
 ```
 
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/d531d775-0d99-4427-ab02-c8bdb8205160)
-
 
 ### UML’de İlişkilerin Listesi
 
@@ -1005,7 +1001,6 @@ yukarıdaki koda baktığımız zaman `DatabaseLogger` sınıfımız, `Logger` a
 
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/7cb209f3-3aed-4981-bfc2-562a39da09c2)
 
-
 ```java
 class FileLogger extends Logger {
     @Override
@@ -1028,7 +1023,6 @@ class FileLogger extends Logger {
 bağlantı açma ve kapatma işlemleri veri tabanına aittir, bir dosyaya değil. Gereksiz hata fırlatmaları, kodun okunmasındaki zorluk, kod kalabalığı gibi birçok olaya neden olmaktadır. Burada bu işlemler bir ara sınıfa alınabilir.
 
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/0d8b40bd-8424-4f29-83f6-0a4e53534d22)
-
 
 ```java
 abstract class Logger {
@@ -1091,7 +1085,6 @@ Sınıflar, kullanmadığı metotları içeren arayüzleri uygulamaya zorlanmama
 Örnek Kod Java
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/e855f7ce-801a-46bc-bdd2-d50ee0b0b2f8)
 
-
 ```java
 interface IWorker {
     void eat() throws Exception;
@@ -1127,7 +1120,6 @@ Yukarıdaki diyagram incelendiğinde, şirket çalışanları IWorker arayüzün
 Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir. `work()`, `pay()`, `eat()` davranışları başka arayüzlere aktarıldı ve ihtiyaç halinde olanlar uygulandı.
 
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/6fc78e86-ca24-4410-9880-13461f7bbd8c)
-
 
 ```java
 interface IWorker {
@@ -1246,7 +1238,6 @@ class Program{
 Örnek Kod Java 2
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/700709b9-6c27-49a7-b2b1-573ca4b3d414)
 
-
 ```java
 class ExceptionReporter {
     private OracleDatabase oracleDatabase;
@@ -1271,7 +1262,6 @@ Yukarıdaki diyagram ve kod incelendiğinde ExceptionReporter sınıfının (yü
 
 Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir.
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/957344e6-0e73-45d2-8b73-485c53eec316)
-
 
 ```java
 class ExceptionReporter {
@@ -1322,7 +1312,6 @@ Veri üzerindeki mantıksal sınırlamalara kısıt adı verilir. Nesnelerdeki a
 **Wrapper Type:** Java da bazen bu Primitive tipleri sarmalamak(Wrapping) zorunda kalırız. Örnek olarak eğer bir koleksiyon(collections) kullanacaksak tanımlaması yapılırken bir nesne ile tanımlanmalıdır. Yani int yerine onu başka bir class içerisinde sarmalayarak kullanmalıyız. Java bizim için bu primitive değerleri sarmalanmış hallerini de hazırlamış. Bunlara da Wrapper Type denilmektedir.
 
 ![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/72a6a6de-1f51-4e7a-9bf9-a877936e5c1e)
-
 
 Örnek Kod Java
 
