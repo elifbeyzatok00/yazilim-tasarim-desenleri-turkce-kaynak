@@ -2,7 +2,7 @@
 
 📌[Laboratuvar Kodları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri)
 
-📒[Ders Slaytları]()
+📒[Ders Slaytları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Ders%20Slaytlar%C4%B1)
 
 ## İçindekiler 📄
 
