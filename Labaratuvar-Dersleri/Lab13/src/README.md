@@ -11,3 +11,6 @@
 > bir cihaz, bir yazıcıda yazdıramıyor olabilir
 
 > özellik kazanan, yazıcılar
+
+`UML Diagram`
+![Alt text](<WhatsApp Image 2024-01-18 at 11.35.16_c17be75c.jpg>)
