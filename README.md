@@ -37,7 +37,8 @@
     - [4+1 Bakış Açısı](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#41-bak%C4%B1%C5%9F-a%C3%A7%C4%B1s%C4%B1-farkl%C4%B1-a%C5%9Famalarda-farkl%C4%B1-uml-diyagramlar%C4%B1)
     - [Use-Case Diyagramları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#use-case-diyagramlar%C4%B1)
     - [Sınıf-Nesne Diyagramları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s%C4%B1n%C4%B1f-nesne-diyagramlar%C4%B1)
-17. [Kaynakça](#Kaynakça)
+17. [Yazılım Tasarım Desenleri](#Yazılım-Tasarım-Desenleri)
+18. [Kaynakça](#Kaynakça)
 
 ## OOP
 
@@ -1855,6 +1856,10 @@ Animal sınıfını Java’da bu şekilde yazdık. Peki biz bu sınıfı tüm di
 ## UML 4+1 Diyagramları
 
 Bu konu ile ilgili sunumu incelemek için [buraya](https://www.canva.com/design/DAFyOSzCYv4/-GI1C07IhEb7r-khcS9wbA/edit?utm_content=DAFyOSzCYv4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) tıklayınız.
+
+## Yazılım Tasarım Desenleri
+
+Bu konu ile ilgili özet şablonu incelemek için [buraya](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/blob/main/Notlar%20ve%20%C3%96zetler/YAZILIM-TASARIM-DESENLERI-OZET.pdf) tıklayınız.
 
 ## Kaynakça
 
