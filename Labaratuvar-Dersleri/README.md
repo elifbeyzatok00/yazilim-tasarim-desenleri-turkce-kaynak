@@ -1,38 +1,38 @@
 # İçindekiler 📄
 
-1. [Labaratuvar Derslerinde Yazılan Kodlar](#)
-   - [Lab01]()
-     - [Lab1-part1]() ➡️ static kavramını anlamak
-     - [Lab1-part2]() ➡️ nesne yönelimli programlamayı anlamak
-   - [Lab02]() ➡️ java'da nesne tanımlarken referans ve nesne kavramını anlamak
-   - [Lab03]()
-     - [Lab3-part1]() ➡️ nesne yönelimli programlama, refereans değiştirme konularını anlamak
-     - [Lab3-part2]() ➡️ interface ve abstract kavramlarını anlamak
-   - [Lab04]() ➡️ Bankacılık Uygulaması ile abstract kavramını anlamak
-   - [Lab05]()
-     - [Lab5-part1]() ➡️ Kargo Uygulaması ile Single Responsiblty ve Open Closed prensiplerini anlamak
-     - [Lab5-part2]() ➡️ Pano sayesinde şekilleri alan uygulama ile Single Responsiblty ve Open Closed prensiplerini anlamak
-   - [Lab06]()
-     - [Lab6-part1]() ➡️ E-Ticaret Uygulaması ile SOLID prensiplerini anlamak
-     - [Lab6-part2]() ➡️ Araba uygulaması ile SOLID prensiplerini anlamak
-   - [Lab07]()
-     - [Lab7-part1]() ➡️ Loglama Uygulaması ile interface kavramını anlamak
-     - [Lab7-part2]() ➡️ Bildirim Uygulaması ile Dependency Inversion prensibini anlamak
-   - [Lab08]() ➡️ Mobil Radyo Uygulaması ile Singleton desenini anlamak
-   - [Lab09]() ➡️ Araba-Parça Uygulaması ile Abstract Factory desenini anlamak
-   - [Lab10]() ➡️ Veri Tabanı Uygulaması ile Adapter desenini anlamak
-     - [Lab10-versiyon1]()
-     - [Lab10-versiyon2]()
-   - [Lab11]() ➡️ Personel Sistemi ile Composite desenini anlamak
-   - [Lab12]() ➡️ Sosyal Medya Uygulaması ile Observer desenini anlamak
-   - [Lab13]() ➡️ Yazıcı-Elektronik Cihaz Uygulaması ile visitor desenini anlamak
-2. [Labaratuvar Dersleri İçin Tamamlanan Ödevler](#)
-   - [ODEV0]() ➡️ Bankacılık Uygulaması ile Single Responsiblty'i anlamak
-   - [ODEV1]() ➡️ Panellerle Çevre ve Alanları hesaplayan Uygulama ile Open-Closed'ı anlamak
-   - [ODEV2]() ➡️ SOLID prensiplerini anlamak
-   - [ODEV3]() ➡️ Şekil Çizme Uygulaması ile Builder desenini anlamak
-   - [ODEV4]() ➡️ Akıllı Ev Sistemi Uygulaması ile Facade desenini anlamak
-   - [ODEV5]() ➡️ Kitap ve Dergi Kapakları Oluşturan uygulama ile Bridge desenini anlamak
+1. [Labaratuvar Derslerinde Yazılan Kodlar](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri)
+   - [Lab01](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab01)
+     - [Lab1-part1](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab01/Lab1-part1) ➡️ static kavramını anlamak
+     - [Lab1-part2](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab01/Lab1-part2) ➡️ nesne yönelimli programlamayı anlamak
+   - [Lab02](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab02/src) ➡️ java'da nesne tanımlarken referans ve nesne kavramını anlamak
+   - [Lab03](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab03)
+     - [Lab3-part1](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab03/Lab3-part1/src) ➡️ nesne yönelimli programlama, refereans değiştirme konularını anlamak
+     - [Lab3-part2](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab03/Lab3-part2) ➡️ interface ve abstract kavramlarını anlamak
+   - [Lab04](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab04/Bankacilik-Uygulamasi/src) ➡️ Bankacılık Uygulaması ile abstract kavramını anlamak
+   - [Lab05](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab05)
+     - [Lab5-part1](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab05/Lab5-part1/KargoUygulamasi/src) ➡️ Kargo Uygulaması ile Single Responsiblty ve Open Closed prensiplerini anlamak
+     - [Lab5-part2](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab05/Lab5-part2/Sekil/src) ➡️ Pano sayesinde şekilleri alan uygulama ile Single Responsiblty ve Open Closed prensiplerini anlamak
+   - [Lab06](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab06)
+     - [Lab6-part1](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab06/Lab6-part1/SOLID_E-ticaret_Uygulamasi/src) ➡️ E-Ticaret Uygulaması ile SOLID prensiplerini anlamak
+     - [Lab6-part2](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab06/Lab6-part2/src) ➡️ Araba uygulaması ile SOLID prensiplerini anlamak
+   - [Lab07](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab07)
+     - [Lab7-part1](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab07/Lab7-part1/Loglama_Uygulamasi/src) ➡️ Loglama Uygulaması ile interface kavramını anlamak
+     - [Lab7-part2](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab07/Lab7-part2/Bildirim_Uygulamasi/src) ➡️ Bildirim Uygulaması ile Dependency Inversion prensibini anlamak
+   - [Lab08](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab08/MobilUygulama/src) ➡️ Mobil Radyo Uygulaması ile Singleton desenini anlamak
+   - [Lab09](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab09/src) ➡️ Araba-Parça Uygulaması ile Abstract Factory desenini anlamak
+   - [Lab10](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab10/AdapterUygulamsi) ➡️ Veri Tabanı Uygulaması ile Adapter desenini anlamak
+     - [Lab10-versiyon1](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab10/AdapterUygulamsi/versiyon1/src)
+     - [Lab10-versiyon2](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab10/AdapterUygulamsi/versiyon2/src)
+   - [Lab11](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab11/CompositeUygulamasi/src) ➡️ Personel Sistemi ile Composite desenini anlamak
+   - [Lab12](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab12/src) ➡️ Sosyal Medya Uygulaması ile Observer desenini anlamak
+   - [Lab13](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/Lab13/src) ➡️ Yazıcı-Elektronik Cihaz Uygulaması ile visitor desenini anlamak
+2. [Labaratuvar Dersleri İçin Tamamlanan Ödevler](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/LabOdevleri)
+   - [ODEV0](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/LabOdevleri/ODEV0/Bankacilik-Uygulamasi/src) ➡️ Bankacılık Uygulaması ile Single Responsiblty'i anlamak
+   - [ODEV1](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/LabOdevleri/ODEV1/src) ➡️ Panellerle Çevre ve Alanları hesaplayan Uygulama ile Open-Closed'ı anlamak
+   - [ODEV2](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/LabOdevleri/ODEV2/src) ➡️ SOLID prensiplerini anlamak
+   - [ODEV3](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/LabOdevleri/ODEV3/src) ➡️ Şekil Çizme Uygulaması ile Builder desenini anlamak
+   - [ODEV4](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/LabOdevleri/ODEV4/src) ➡️ Akıllı Ev Sistemi Uygulaması ile Facade desenini anlamak
+   - [ODEV5](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Labaratuvar-Dersleri/LabOdevleri/ODEV5/src) ➡️ Kitap ve Dergi Kapakları Oluşturan uygulama ile Bridge desenini anlamak
 3. [Laboratuvar Derslerinde Aldığım Notlar](#Laboratuvar-Derslerinde-Aldığım-Notlar)
 
 ---
