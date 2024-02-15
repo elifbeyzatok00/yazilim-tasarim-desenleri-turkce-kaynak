@@ -37,7 +37,7 @@
     - [4+1 Bakış Açısı](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#41-bak%C4%B1%C5%9F-a%C3%A7%C4%B1s%C4%B1-farkl%C4%B1-a%C5%9Famalarda-farkl%C4%B1-uml-diyagramlar%C4%B1)
     - [Use-Case Diyagramları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#use-case-diyagramlar%C4%B1)
     - [Sınıf-Nesne Diyagramları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak#s%C4%B1n%C4%B1f-nesne-diyagramlar%C4%B1)
-17. [Yazılım Tasarım Desenleri(Design Patterns)](<#Yazılım-Tasarım-Desenleri-(Design-Patterns)>)
+17. [Yazılım Tasarım Desenleri(Design Patterns)](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak?tab=readme-ov-file#yaz%C4%B1l%C4%B1m-tasar%C4%B1m-desenleri-design-patterns)
 18. [Kaynakça](#Kaynakça)
 
 ## OOP
