@@ -4,6 +4,8 @@
 
 📒[Ders Slaytları](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Ders%20Slaytlar%C4%B1)
 
+📔[Notlar ve Özetler](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/tree/main/Notlar%20ve%20%C3%96zetler)
+
 ## İçindekiler 📄
 
 1. [OOP Nedir?](#OOP)
