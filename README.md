@@ -51,7 +51,7 @@ Ortaya çıkış nedenlerinden bazıları da yazılımda; karmaşıklığı azal
 
 ### Nedir?
 
-![Alt text](image.png)
+![Alt text](images/image.png)
 
 Yukarıda Developer adında bir sınıf görülmektedir. Sınıf alanlar (fields) ve davranışlarımızın (methods) tanımlandığı yerdir. Nesne ise bu sınıftan bir örnek alınmış halidir.
 
@@ -143,7 +143,7 @@ Bu örneklerde, "Ogrenci" adında bir sınıf oluşturuldu. Bu sınıf içinde "
 ### Nesne Yönelimli Programlama İlkeleri
 
 Nesne yönelimli programlama 4 temel ilke üzerine kuruludur ve bir dilin, nesne yönelimli programlamayı uyguluyor denebilmesi için 4 koşulu da sağlıyor olması gerekiyor. Bunlar; Encapsulation, Abstraction, Inheritance, Polymorphism
-![Alt text](image-1.png)
+![Alt text](images/image-1.png)
 
 ## Encapsulation (Kapsülleme)
 
@@ -294,7 +294,7 @@ Bu örneklerde, Kisi sınıfı içinde ad ve yas adında private (private C#, Ja
 Bir sınıftan başka sınıfların türetilmesidir.
 
 Kalıtım, mevcut sınıfların üzerine yeni sınıflar oluşturma yeteneğidir. Bu sayede türetilen sınıf, türediği sınıfın özelliklerini devralır. Kalıtımın en büyük yararı kodun yeniden kullanılmasıdır. Mevcut sınıftan biraz farklı bir sınıf oluşturmak istiyorsak, kodu kopyalamamıza gerek yoktur. Bunun yerine, varolan sınıfı genişletir ve ekstra işlevselliği alt sınıfa koyarız.  
-![Alt text](image-2.png)
+![Alt text](images/image-2.png)
 
 Çoğu programlama dilinde yalnızca bir sınıftan türetme işlemi gerçekleştirilmektedir ama birden fazla interface'den (ara birimden) türetilme işlemi de gerçekleştirilebilmektedir.
 
@@ -418,7 +418,7 @@ Bu örneklerde, Person sınıfı bir kişinin adını ve yaşını temsil ederke
 
 Bir nesnenin başka bir nesne gibi davranabilmesi, kullanılabilmesi. Biraz daha açık bir ifade ile: alt sınıfların, üst sınıflara ait olan davranışlarını başka bir biçimde gerçekleştiriyor olması olayıdır.
 
-![Alt text](image-3.png)
+![Alt text](images/image-3.png)
 
 Nesnenin davranışı çalışma anında belirlendiği için, çok biçimlilik özelliği sayesinde nesnelerin türünü önceden bilmek zorunda kalmayız.
 
@@ -653,14 +653,14 @@ belirlenir. Bu erişim belirteçleri sayesinde bir özellik veya
 metodun diğer classlardan erişilip erişilemeyeceğini belirtir.
 Aşağıda erişim belirteçleri sıralanmıştır;
 
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/bf66c27d-6aa3-4ce4-a739-8c39eda52cc5)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/bf66c27d-6aa3-4ce4-a739-8c39eda52cc5)
 
 ```
 Not: Eğer bir özellik veya metodun erişim belirteci
 belirtilmemişse default olarak “private” değerini alır.
 ```
 
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/d531d775-0d99-4427-ab02-c8bdb8205160)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/d531d775-0d99-4427-ab02-c8bdb8205160)
 
 ### UML’de İlişkilerin Listesi
 
@@ -674,7 +674,7 @@ belirtilmemişse default olarak “private” değerini alır.
 
 #### 1- Generalization/Inheritance
 
-![Alt text](image-11.png)
+![Alt text](images/image-11.png)
 
 Üstte kalıtımın nasıl ifade edildiğinin gösterimi bulunmakta. Bu gösterim abstract sınıftan kalıtım alırken de aynı. Bu tür kalıtım ilişkisinde **nesneler arasında “IS-A” ilişkisi** bulunmaktadır.
 
@@ -687,7 +687,7 @@ belirtilmemişse default olarak “private” değerini alır.
 #### 2- Realization/Implementation
 
 Bu ilişki **arayüzler ile sınıflar arasındaki ilişki**yi modellemek için kullanılır. Dashed(kesikli) çizgi ile ifade edilir. Kalıtımdaki çizginin kesik kesik olan halidir.
-![Alt text](image-12.png)
+![Alt text](images/image-12.png)
 
 #### 3- Association
 
@@ -704,7 +704,7 @@ Burada da **sınıflar arasında HAS-A ilişkisi** bulunuyor.
 
 Bu iki sınıf arasında tek taraflı bir ilişki olduğunda
 kullanılmakta.
-![Alt text](image-13.png)
+![Alt text](images/image-13.png)
 Üstteki ilişkinin okunuşu şu şekildedir.
 
 ```
@@ -719,14 +719,14 @@ Burada 1 yerine 0..n şeklinde bir ifade de kullanılabilirdi. Üstteki ilişkid
 
 Bu iki sınıf arasında çift taraflı bir ilişki olduğunda kullanılmakta.
 
-![Alt text](image-14.png)
+![Alt text](images/image-14.png)
 Üstte bunun çok güzel bir örneği bulunmakta. Bu ifadenin Türkçe’si şu şekilde. Student sıfır ya da sonsuz tane kursa kayıt olmuş olabilir, aynı şekilde kursa hiç öğrenci kayıt olmamış olabilir ya da sonsuz tane öğrenci kayıt olabilir. Burada sol tarafta bulunan sınıfı karşı ilişkili olduğu sınıf tarafındaki sayı ilgilendiriyor. Sağdakini de tam tersi. Yani bir kursa en az 1 öğrenci kayıt olmalı ifadesi için Student sınıfı tarafını 1..\* şeklinde değiştirecektik. Student sınıfında Course sınıfından yaratılmış nesnelerin listesi, Course sınıfında da Student sınıfından yaratılmış nesnelerin listesi tutulmakta.
 
 ###### Reflexive
 
 Anlaması en zor ilişki bu diyebiliriz. Reflexive(dönüşlü) yani sınıfın kendisi ile yaptığı ilişkidir.
 
-![Alt text](image-15.png)
+![Alt text](images/image-15.png)
 
 Üstte reflexive ilişki için güzel bir örnek yer alıyor. Directory(Dosya dizini) hiç ya da sonsuz sayıda alt dosya dizinine sahip olabilir. Aynı şekilde hiç ya da 1 tane üst dizine sahip olabilir. Directory sınıfı kendi sınıfından türettiği 2 tane directory nesnesi ile üstteki modeli gerçekleştirebilir.
 
@@ -740,20 +740,20 @@ Aggregation ve Composition’da sınıflar arasında parçası olma anlamı vard
 
 - Sahiptir veya içerir ilişkisini gösterir.
 - İçinin boş olması, ilişki olmadan da nesnenin var olabileceğini gösterir.
-  ![Alt text](image-8.png)
+  ![Alt text](images/image-8.png)
 
 Aşağıda sınıflar arasında Aggregation ilişkisini görebilirsiniz. Tekerlek araba sınıfının bir parçasıdır. Ancak araba sınıfı yok olduğunda tekerlek yok olmak zorunda değildir. Aralarında zayıf bir parça ilişkisi vardır.
 
-![Alt text](image-16.png)
+![Alt text](images/image-16.png)
 
 ###### Composition (Bağımlı İyelik) İlişkisi
 
 - Parçalar olmadan nesne hiçbir anlam ifade etmez.
-  ![Alt text](image-9.png)
+  ![Alt text](images/image-9.png)
 
 Aşağıda sınıflar arasında Composition ilişkisini görebilirsiniz. Kalp, insan sınıfının bir parçasıdır. İnsan sınıfı yok olduğunda kalpte yok olacaktır. İki sınıf arasında güçlü bir parça ilişkisi vardır. Composition ile agreegation arasındaki fark budur.
 
-![Alt text](image-17.png)
+![Alt text](images/image-17.png)
 
 ### İyi Bir Tasarım
 
@@ -829,9 +829,9 @@ Stack bellek bölgesi, genellikle değer tipleri ve referanslar için kullanıla
 
 Heap bellek bölgesi, genellikle **referans tipleri için dinamik bellek tahsisi için kullanılır.** Yani, heap bellek bölgesi, program çalıştığı sürece değişebilen dinamik veri yapılarını (örneğin, değişken boyutlu diziler ve nesneler) saklamak için kullanılır. Heap bellek bölgesi, programcının manuel olarak bellek tahsisi ve geri verme işlemlerinden sorumlu olduğu daha esnek bir bellek alanıdır. Bu, daha fazla bellek kullanım esnekliği sağlar, ancak doğru yönetilmezse bellek sızıntılarına (memory leaks) yol açabilir.
 
-![Alt text](image-18.png)
+![Alt text](images/image-18.png)
 
-![Alt text](image-20.png)
+![Alt text](images/image-20.png)
 
 int, short, long, byte, float, double, decimal, char, bool => değer tipi
 string, diziler, class, interface, enum, struct => referans tipi
@@ -959,17 +959,17 @@ Alt sınıflardan oluşan nesnelerin, üst sınıfın nesneleri ile yer değişt
 Alt sınıflar, üst sınıflardan türediği için onların davranışlarını devralırlar. Eğer üst sınıflara ait davranışları gerçekleştirmiyorlarsa davranışı yapan metotu muhtemelen boş bırakır ya da bir hata fırlatırız fakat bu işlemler kod kirliliğine ve gereksiz kod kalabalığına neden olmaktadır. Bunların yanı sıra projeye daha sonradan dahil olacak geliştiriciler için de sorun oluşturmaktadır. Geliştirici, sistemin sağlıklı yürüdüğünü düşünerek gerçekleştirilmeyen bir davranışı kullanmaya çalışabilir.
 
 Örnek
-![Alt text](image-25.png)
+![Alt text](images/image-25.png)
 
 Peki "doldurma" fonksiyonu nereye konulmalıdır?
 Çözüm:
 Liskov prensibine göre ara sınıf koymamız gerekmektedir.
 
-![Alt text](image-26.png)
+![Alt text](images/image-26.png)
 
 Örnek Kod Java
 
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/06f02a1a-79a0-4c1f-968e-04c2e3b7544b)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/06f02a1a-79a0-4c1f-968e-04c2e3b7544b)
 
 ```java
 abstract class Logger {
@@ -1002,7 +1002,7 @@ class DatabaseLogger extends Logger {
 
 yukarıdaki koda baktığımız zaman `DatabaseLogger` sınıfımız, `Logger` adlı sınıftan türemektedir. Başlangıç aşaması için bir problem görünmezken ilerleyen zamanlarda veri tabanı değil de bir dosyaya kayıt işlemi alınacağı zaman aşağıdaki gibi bir görünüm meydana gelecektir.
 
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/7cb209f3-3aed-4981-bfc2-562a39da09c2)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/7cb209f3-3aed-4981-bfc2-562a39da09c2)
 
 ```java
 class FileLogger extends Logger {
@@ -1025,7 +1025,7 @@ class FileLogger extends Logger {
 
 bağlantı açma ve kapatma işlemleri veri tabanına aittir, bir dosyaya değil. Gereksiz hata fırlatmaları, kodun okunmasındaki zorluk, kod kalabalığı gibi birçok olaya neden olmaktadır. Burada bu işlemler bir ara sınıfa alınabilir.
 
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/0d8b40bd-8424-4f29-83f6-0a4e53534d22)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/0d8b40bd-8424-4f29-83f6-0a4e53534d22)
 
 ```java
 abstract class Logger {
@@ -1079,14 +1079,14 @@ Sınıflar, kullanmadığı metotları içeren arayüzleri uygulamaya zorlanmama
   Arayüzlerimizde genel olarak birçok operasyonel işlem barındırabiliriz fakat bu arayüzü uygulayan sınıfların, bazılarını kullanmama durumu olabilmektedir. Bir sınıf birden fazla arayüzü uygulaması özelliğiyle de birlikte bu prensip, bu tür durumlarda arayüzlerin ayrılmasını ve ihtiyaç halinde olanların kullanmasını söylemektedir.
 
 Örnek
-![Alt text](image-27.png)
+![Alt text](images/image-27.png)
 
 Çözüm: Arayüz ayrıştırma prensibi uygulamak
 
-![Alt text](image-28.png)
+![Alt text](images/image-28.png)
 
 Örnek Kod Java
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/e855f7ce-801a-46bc-bdd2-d50ee0b0b2f8)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/e855f7ce-801a-46bc-bdd2-d50ee0b0b2f8)
 
 ```java
 interface IWorker {
@@ -1122,7 +1122,7 @@ Yukarıdaki diyagram incelendiğinde, şirket çalışanları IWorker arayüzün
 
 Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir. `work()`, `pay()`, `eat()` davranışları başka arayüzlere aktarıldı ve ihtiyaç halinde olanlar uygulandı.
 
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/6fc78e86-ca24-4410-9880-13461f7bbd8c)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/6fc78e86-ca24-4410-9880-13461f7bbd8c)
 
 ```java
 interface IWorker {
@@ -1239,7 +1239,7 @@ class Program{
 ```
 
 Örnek Kod Java 2
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/700709b9-6c27-49a7-b2b1-573ca4b3d414)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/700709b9-6c27-49a7-b2b1-573ca4b3d414)
 
 ```java
 class ExceptionReporter {
@@ -1264,7 +1264,7 @@ class OracleDatabase {
 Yukarıdaki diyagram ve kod incelendiğinde ExceptionReporter sınıfının (yüksek seviyeli sınıf), OracleDatabase sınıfına (düşük seviyeli sınıf) direkt olarak bağımlı olduğu görülmektedir. İleride veri tabanı olarak Oracle değil de MySQL kullanmak istersek maalesef bu sınıfa müdahale etmek zorunda kalacağız. Bu istenmeyen bir davranıştır. Bunun çözümünü ise buradaki bağımlılıkları soyutlayarak sağlayacağız.
 
 Yukarıdaki UML diyagramını biraz daha düzenlersek aşağıdaki gibi bir yapı elde edilir.
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/957344e6-0e73-45d2-8b73-485c53eec316)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/957344e6-0e73-45d2-8b73-485c53eec316)
 
 ```java
 class ExceptionReporter {
@@ -1314,7 +1314,7 @@ Veri üzerindeki mantıksal sınırlamalara kısıt adı verilir. Nesnelerdeki a
 
 **Wrapper Type:** Java da bazen bu Primitive tipleri sarmalamak(Wrapping) zorunda kalırız. Örnek olarak eğer bir koleksiyon(collections) kullanacaksak tanımlaması yapılırken bir nesne ile tanımlanmalıdır. Yani int yerine onu başka bir class içerisinde sarmalayarak kullanmalıyız. Java bizim için bu primitive değerleri sarmalanmış hallerini de hazırlamış. Bunlara da Wrapper Type denilmektedir.
 
-![image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/72a6a6de-1f51-4e7a-9bf9-a877936e5c1e)
+![images/image](https://github.com/elifbeyzatok00/yazilim-tasarim-desenleri-turkce-kaynak/assets/102792446/72a6a6de-1f51-4e7a-9bf9-a877936e5c1e)
 
 Örnek Kod Java
 
@@ -1385,14 +1385,14 @@ Bu örnek, Araba adında bir sınıf oluşturur. Bu sınıfın içinde marka, mo
 - Get bloğu değişkeninin değeri okunmak istendiğinde çalışır.
 - Set bloğu değişkene değer atanmak istendiğinde çalışır.
 
-![Alt text](image-26.png)
+![Alt text](images/image-26.png)
 
 ## Constructor Nedir?
 
 Nesneler için classların örneğidir demiştik. Constructor her
 nesne tanımlandığında devreye giren o nesneye ait özelliklerinin
 ilk değerlerini atamak için kullanılan metottur.
-![Alt text](image-28.png)
+![Alt text](images/image-28.png)
 
 Constructor Tanımlama Kuralları :
 
@@ -1404,7 +1404,7 @@ Constructor Tanımlama Kuralları :
   istiyorsak koşulları get ve set blokları içersinde yazmalıyız.
 - “Value” değişkene atanmak istenen değeri belirtir.
 
-  ![Alt text](image-27.png)
+  ![Alt text](images/image-27.png)
 
 ## Kalıtım ile Üretilen Sınıflın (A-B-C) Çalışması
 
@@ -1739,14 +1739,14 @@ Artırımlı model, **genellikle büyük ve karmaşık projeler için kullanıl�
 
 UML, bir sistemin tasarımını görselleştirmek için yazılım mühendisliği alanında genel amaçlı modelleme dilidir. Yazılı bir dil değildir. Farklı amaçlar için kategorilere ayrılmış olsa da, genel itibariyle modelleme için kullanılır. 1995 yılında, yazılımlarda bir standart yaklaşım oluşturmak için geliştirilmiştir. Yani UML diyagramları ile önceden modellediğiniz bir yazılım projesini, modele uygun olacak şekilde herhangi bir dil ile geliştirebiliyorsunuz. Bu da yazılım mühendisleri arasında ortak bir dil oluşturuyor. İlk çıktığı zamandan beri sürekli geliştirme göstererek, birçok farklı dala ayrılmıştır. Aşağıda UML diyagramlarının kategorilerini görebiliyoruz.
 
-![Alt text](image-5.png)
+![Alt text](images/image-5.png)
 
 Yazılım yaşam döngüsünün **Analiz-Tasarım** aşamalarında oluşturulur.
 Analiz → Kullanım senaryosu
 Tasarım → Sınıf diyagramı
 Programlama dili değildir. Diyagram çizme ve ilişkisel modelleme dilidir
 
-![Alt text](image-4.png)
+![Alt text](images/image-4.png)
 
 #### 4+1 Bakış Açısı: Farklı aşamalarda farklı UML diyagramları.
 
@@ -1811,7 +1811,7 @@ Kullanım durumu (use case) diyagramları ve senaryoları gibi araçlar kullanı
 - Use case'ler arası ilişki: **dependency**
   Kesik çizgi ile ifade edilir.
 
-![Alt text](image-6.png)
+![Alt text](images/image-6.png)
 
 ### Use-case'ler arası ilişkiler:
 
@@ -1819,7 +1819,7 @@ Kullanım durumu (use case) diyagramları ve senaryoları gibi araçlar kullanı
 2. Kullanılmayan ürünlerin silinmesi <<extend>> Ürün silinmesi
 3. Ödeme <<include>> Kimlik sınama
 
-![Alt text](image-7.png)
+![Alt text](images/image-7.png)
 
 ## Sınıf-Nesne Diyagramları
 
@@ -1845,7 +1845,7 @@ class Animal {
 
 Animal sınıfını Java’da bu şekilde yazdık. Peki biz bu sınıfı tüm diğer nesne tabanlı dillerde yazabilecek şekilde ifade etmek isteseydik? Yani diğer yazılımcıların da anlayacağı bir dilde yazsaydık. İşte o zaman sınıf diyagramında ifade etmemiz gerekirdi.
 
-![Alt text](image-10.png)
+![Alt text](images/image-10.png)
 
 - Üstte “Attributes” yani sınıfa ait nitelikler(örneğin isim, yaz, id bilgisi),
 - Alt kısımda sınıfa ait metodlar bulunuyor.

@@ -4,7 +4,7 @@
 
 ## `UML Diagram`
 
-![Alt text](<WhatsApp Image 2024-01-16 at 15.20.37_9643db43-1.jpg>)
+![Alt text](<WhatsApp images/image 2024-01-16 at 15.20.37_9643db43-1.jpg>)
 
 ## Versiyon 1'de ne yaptık?
 

@@ -1,10 +1,10 @@
 # Task
 
-![Alt text](<WhatsApp Image 2023-12-27 at 15.07.07_af64d433.jpg>)
+![Alt text](<WhatsApp images/image 2023-12-27 at 15.07.07_af64d433.jpg>)
 
 ### `UML Diagram`
 
-![Alt text](<WhatsApp Image 2023-12-27 at 15.07.07_55ddaca5.jpg>)
+![Alt text](<WhatsApp images/image 2023-12-27 at 15.07.07_55ddaca5.jpg>)
 
 > 4 liste var hepsinde de birer liste + ekle + çıkar fonksiyonları var
 > 4 liste : Calısan, Tasarımcı, Geliştirici, Yönetici
@@ -17,5 +17,5 @@
 
 > problem ne hiyerarşik yapıyı sağlamak + SOLID e uymak
 
-![Alt text](image.png)
-![Alt text](image-1.png)
+![Alt text](images/image.png)
+![Alt text](images/image-1.png)

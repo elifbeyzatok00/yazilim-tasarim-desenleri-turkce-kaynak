@@ -6,4 +6,4 @@
 > Ödev olarak bu ev aletlerine yeni bir tanesini eklemeniz ve ayrıca akıllı ev sistemi sınıfında
 > yeni iki farklı mod oluşturarak Facade uygulaması beklenmektedir.
 >
-> ![Alt text](image.png)
+> ![Alt text](images/image.png)
